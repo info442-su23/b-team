@@ -1,10 +1,10 @@
 # b-team
 Team Name: BioBuddies
 
-William Phan - Developer
-Robert Bonglamphone - Developer
-Sloane Shea - Product Designer
-Brooke Pedersen - PM
+William Phan - Developer <br>
+Robert Bonglamphone - Developer <br>
+Sloane Shea - Product Designer <br>
+Brooke Pedersen - PM <br>
 
 Mission Statement: Decrease food waste by informing the youth
 
