@@ -26,7 +26,7 @@ As for the solution, we believe the greatest issue is the lack of acknowledgment
 	
 ## Design
 ###### Access the Figma Wireframe Board [HERE](https://www.figma.com/file/vhuUCn8wwBLExOvyU02pOC/Untitled?type=design&node-id=0%3A1&mode=design&t=zeWJaQqc2tIIWLC2-1)
-###### Access the Figma board to see the labeled wireframes that correlate to the descriptions below.
+#### Access the Figma board to see the labeled wireframes that correlate to the descriptions below.
 ###
 ###
 ###### Wireframe #1 - Landing Page
