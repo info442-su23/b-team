@@ -16,23 +16,23 @@ If a bug has been found:
 1. **Verify the bug**: Try to replicate the same steps that led them to produce that bug to verify that it’s not an isolated case.
 2. **Search for Existing Issues**: Check the repo’s issues tracker to see if the bug has already been reported. If you find a similar issue, leave a comment with any additional information about the bug.
 3. **Create a new issue**: Feel free to copy this template to fill out the bug report
-**Title**: Clear, descriptive summary of the  problem
-**Comment**:
-  1. **Steps to Reproduce**: List specific steps taken to encounter the bug, including any user input or data used in testing (e.g. “Clicked on ‘next’ button”)
-  2. **Expected Behavior**: What should happen if someone follow the steps
-  3. **Actual Behavior**: What actually happened
-  4. **Environment**:
+- **Title**: Clear, descriptive summary of the  problem
+- **Comment**:
+  - **Steps to Reproduce**: List specific steps taken to encounter the bug, including any user input or data used in testing (e.g. “Clicked on ‘next’ button”)
+  - **Expected Behavior**: What should happen if someone follow the steps
+  - **Actual Behavior**: What actually happened
+  - **Environment**:
     Operating system
     Browser
     Was the web app run on test or production?
-  5. **Screenshots or Logs**
+  - **Screenshots or Logs**
 4. **Assign labels**:
-    “Bug - High priority” (e.g. If bug inhibits the end user from playing the game, crashes, functionality issues)
-    “Bug - Low priority” (e.g. cosmetic issues)
+- “Bug - High priority” (e.g. If bug inhibits the end user from playing the game, crashes, functionality issues)
+- “Bug - Low priority” (e.g. cosmetic issues)
 5. **Assigning to Team Members**
-  1. Assign based on familiarity with the code and where the bug is being produced
-  2. Consider workload and availability
-  3. Self-assign if you feel competent that you could resolve it on your own
+- Assign based on familiarity with the code and where the bug is being produced
+- Consider workload and availability
+- Self-assign if you feel competent that you could resolve it on your own
 6. **Close the issue once resolved**
 
 ## User Acceptance Testing Script
