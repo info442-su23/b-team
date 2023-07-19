@@ -8,11 +8,12 @@ nav.navbar ul {
     margin: 0;
     padding: 0;
     display: flex;
-    padding-left: 40px;
+    padding-left: 10px;
 }
 
 nav.navbar ul li {
     margin-right: 30px;
+    padding-left: 10px;
 }
 
 nav.navbar ul li:last-child {
@@ -23,8 +24,10 @@ nav.navbar ul li a {
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 10px 16px;
     text-decoration: none;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 nav.navbar ul li a:hover {
@@ -43,7 +46,6 @@ div.energypoints-container {
     border-radius: 25px;
     display: inline-block;
     overflow: hidden;
-    position: static;
 }
 
 progress {
@@ -61,7 +63,6 @@ div p.points {
     display: inline;
     margin-top: 0;
     padding: 10px;
-    position: static;
 }
 
 div img.sun {
@@ -70,12 +71,19 @@ div img.sun {
     padding: 3px;
     width: 30px;
     height: 30px;
+}
+
+img.logo {
+    margin-top: 2px;
+    padding: 3px;
+    width: 30px;
+    height: 30px;
     position: static;
 }
 
 div.container {
     display: flex;
-    position: static;
+    /* position: static; */
     align-items: center;
-    padding-left: 800px;
+    padding-left: 42.5%;
 }
