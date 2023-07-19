@@ -1,34 +1,81 @@
 /* CSS for the navigation bar */
 nav.navbar {
-    background-color: #333;
-  }
-  
-  nav.navbar ul {
+    background-color: #6CBC96;
+}
+
+nav.navbar ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
-  }
-  
-  nav.navbar ul li {
-    float: left;
-  }
-  
-  nav.navbar ul li a {
+    display: flex;
+    padding-left: 40px;
+}
+
+nav.navbar ul li {
+    margin-right: 30px;
+}
+
+nav.navbar ul li:last-child {
+    margin-right: 0;
+}
+
+nav.navbar ul li a {
     display: block;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-  }
-  
-  nav.navbar ul li a:hover {
-    background-color: #111;
-  }
-  
-  /* Make the navigation bar span the entire width */
-  nav.navbar ul {
+}
+
+nav.navbar ul li a:hover {
+    background-color: #549476;
+}
+
+/* Additional styling for the image */
+img {
+    max-width: 100%;
+    display: block;
+    margin-top: 20px;
+}
+
+div.energypoints-container {
+    width: 300px;
+    border-radius: 25px;
+    display: inline-block;
+    overflow: hidden;
+    position: static;
+}
+
+progress {
+    width: 100%;
+    height: 30px;
+    background-color: #f1f1f1;
+}
+
+progress::-webkit-progress-value {
+    background-color: white;
+}
+
+div p.points {
+    color: white;
+    display: inline;
+    margin-top: 0;
+    padding: 10px;
+    position: static;
+}
+
+div img.sun {
+    border-radius: 50%;
+    margin-top: 0;
+    padding: 3px;
+    width: 30px;
+    height: 30px;
+    position: static;
+}
+
+div.container {
     display: flex;
-    justify-content: space-around;
-  }
-  
+    position: static;
+    align-items: center;
+    padding-left: 800px;
+}
