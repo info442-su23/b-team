@@ -5,17 +5,21 @@ body {
 }
 img.seed {
     border-radius: 50px;
-    /* background: #73AD21; */
     padding: 20px;
     width: 350px;
     height: 300px;
     float: left;
     margin-left: 10%;
+    position: static;
 }
-p {
+div.percent p {
     color: white;
     margin: 5%;
-    line-height: 20em;
+    padding: 10%;
+    /* line-height: 20em; */
+    /* position: static; */
+    display: flex;
+    align-items: center;
 }
 div.energypoints {
     width: 300px;
@@ -24,27 +28,42 @@ div.energypoints {
     border: 4px solid white;
     /* padding: 20px; */
     /* position: fixed; */
-    top: 100px;
-    left: 200px;
+    /* top: 100px;
+    left: 200px; */
     display: inline-block;
-    text-align: center;
+    /* text-align: center; */
     /* vertical-align: top; */
-    /* display: block; */
+    /* display: inline; */
     /* position: absolute; */
+    /* display: flex; */
+    /* align-items: center; */
 }
-p.points {
+div p.points {
     /* padding-top: 0%; */
-    position: relative;
-    margin-top: -10%;
-    margin-right: 37%;
+    position: fixed;
+    /* margin-top: -10%;
+    margin-right: 37%; */
+    color: white;
+    /* display: flex; */
+    /* align-items: center; */
+    display: inline;
+    align-items: center;
 }
-img.sun {
+div img.sun {
     border-radius: 50%;
     /* background: #73AD21; */
     /* padding: 20px; */
     width: 50px;
     height: 50px;
-    float: right;
-    margin-top: -21.5%;
-    margin-right: 35%;
+    /* position: static; */
+    /* display: flex; */
+    /* float: right; */
+    /* text-align: right; */
+    /* margin-left: auto; */
+}
+div.container {
+    display: flex;
+    position: static;
+    align-items: center;
+    padding-left: 40%;
 }
