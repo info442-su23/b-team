@@ -10,7 +10,8 @@ header img {
 }
 
 h1 {
-    font-size: 40px;
+    font-size: 60px;
+    margin: 10px;
 }
 
 h2 {
@@ -21,10 +22,10 @@ h2 {
 .start-button {
     background-color: white;
     color: #6CBC96;
-    font-size: 24px;
+    font-size: 30px;
     padding: 20px 40px;
     border: none;
-    border-radius: 8px;
+    border-radius: 10px;
     cursor: pointer;
 }
 
