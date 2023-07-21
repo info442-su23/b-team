@@ -1,3 +1,5 @@
+import './index.css';
+
 function App() {
   return (
     <div className="App">
@@ -6,6 +8,7 @@ function App() {
     </div>
   );
 }
+
 
 // https://www.youtube.com/watch?v=i7oL_K_FmM8
 // function setCookie(name, value){

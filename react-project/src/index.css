@@ -5,9 +5,45 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #6CBC96;
+  color: white;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    monospace, 'Karla', sans-serif;;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+}
+
+p {
+  text-align: center;
+  padding: 20px;
+  font-family: 'Karla';
+  font-size: 50px;
+  font-weight: bold;
+}
+
+#sun {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  height: 25%;
+  padding: 5%;
+  background-color: white;
+  border-radius: 20px;
+}
+
+button {
+  display: flex;
+  justify-content: right;
+  max-width: fit-content;
+  padding: 16px;
+  background-color: white;
+  color: #6CBC96;
+  border-radius: 10%;
 }
