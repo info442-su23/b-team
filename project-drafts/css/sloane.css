@@ -121,8 +121,19 @@ li {
     padding: 10px;
     border-radius: 10px;
     flex-basis: auto;
-  }
+}
 
-  .card p {
+.card p {
     font-size: 20px;
-  }
+}
+
+/* Garden page */
+
+.garden-plot-empty {
+    width: 50vh;
+    max-width: 100%;
+    margin-top: 3rem;
+    height: auto;
+    display: block;
+    
+}
