@@ -87,3 +87,76 @@ div.container {
     align-items: center;
     padding-left: 42.5%;
 }
+
+/* seed select */
+body.seed-select-page {
+    margin: 0;
+    padding: 0;
+    background-color: #6CBC96;
+}
+
+.container-easy {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    height: 250px;
+    max-width: 600px;
+    margin: 20px 375px;
+    margin-bottom: 100px;
+}
+
+.container-med {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    height: 250px;
+    max-width: 600px;
+    margin: 20px 375px;
+    margin-bottom: 100px;
+}
+
+.container-hard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    height: 250px;
+    max-width: 600px;
+    margin: 20px 375px;
+    margin-bottom: 100px;
+}
+
+.box {
+    background-color: white;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    /* Optional: Adds a subtle box shadow */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+}
+
+.seed-select {
+    border-radius: 50%;
+    margin-top: 0;
+    padding: 3px;
+    width: 150px;
+    height: 200px;
+}
+
+.seed-levels {
+    color: white;
+    text-align: center;
+    /* padding-top: 40px; */
+}
+
+hr {
+    border: none;
+    /* Remove the default border */
+    border-top: 2px solid white;
+    /* Set the top border to be a solid white line */
+    margin-top: 50px;
+    /* Optional: Add some margin for spacing */
+}
