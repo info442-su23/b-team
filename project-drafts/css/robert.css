@@ -14,7 +14,7 @@ code {
     monospace, 'Karla', sans-serif;;
 }
 
-article {
+article#quiz-score {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -40,7 +40,8 @@ img {
 }
 
 img#garden {
-  background-color: transparent;
+  background-color: white;
+  padding: 5%;
 }
 
 button {
@@ -84,13 +85,44 @@ a {
   justify-content: right;
 }
 
-section {
+section.sun {
   display: flex;
   flex-direction: column;
   background-color: white;
   border-radius: 10%;
 }
 
-section > p {
+section.sun > p {
   color:black
+}
+
+section#select-new-seed {
+  display: flex;
+}
+
+div.container-new-seed {
+  display: flex;
+  align-items: center;
+}
+
+div.energypoints-container {
+  width: 300px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+progress {
+  width: 100%;
+  height: 30px;
+  background-color: #f1f1f1;
+}
+
+progress::-webkit-progress-value {
+  background-color: white;
+}
+
+#navbar-sun {
+  background-color: transparent;
 }
