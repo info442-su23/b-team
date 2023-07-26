@@ -9,24 +9,8 @@ import GardenPage from "./components/GardenPage.js";
 import HomePage from "./components/HomePage.js";
 import { Routes, Route, Navigate } from 'react-router-dom'
 
-// function App() {
-//   return (
-//     <BrowserRouter>
-//       <div className="App">
-//         <NavBar />
-//         <SeedSelect />
-//       </div>
-//       <Routes>
-//         <Route>
-//           <Route path="/home" element={<HomePage />} />
-//           {/* Add other routes for other components/pages */}
-//         </Route>
-//       </Routes>
-//     </BrowserRouter>
-//   );
-// }
 
-// Correct and working model
+// working model
 function App(props) {
   return (
     <div className="App">
@@ -34,6 +18,7 @@ function App(props) {
         <Route path="/" element={<HomePage />} />
         <Route path="garden" element={<GardenPage />} />
         <Route path="games" element={<QuizInstructions />} />
+        
         {/* <LandingPage /> */}
         {/* <InstructionPage /> */}
         {/* <NavDemo /> */}

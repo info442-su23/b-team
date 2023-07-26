@@ -187,11 +187,21 @@ button.next-button-seed {
 
 .back-arrow {
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: 30px;
+  left: 30px;
   color: white;
   font-size: 70px;
   text-decoration: none;
+}
+
+button.back-arrow {
+  background-color: white;
+  color: #6CBC96;
+  font-size: 30px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
 /* Landing Page */
@@ -256,14 +266,6 @@ h2.landing-page {
 }
 
 /* Instructions page */
-.back-arrow {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  color: white;
-  font-size: 70px;
-  text-decoration: none;
-}
 
 ul.instruction {
   margin-top: 1rem;

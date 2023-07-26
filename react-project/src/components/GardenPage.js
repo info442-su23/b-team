@@ -1,11 +1,12 @@
 import React from 'react';
 import NavBar from './Nav';
+import BackButton from './GoBackButton';
 
 export default function GardenPage() {
     return (
         <body>
             <NavBar />
-            <a href="#" className="back-arrow"><span className="arrow-left">&#8592;</span></a>
+            <a href="#" className="back-arrow"><BackButton /></a>
 
             <div className="container-demo">
                 <header className="navigation-bar-demo">

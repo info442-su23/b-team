@@ -1,11 +1,19 @@
-export default function GoBackButton() {
-  const goBack = () => {
-    window.history.go(-1);
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+
+function BackButton() {
+  const navigate = useNavigate();
+
+  // Function to handle the back button click
+  const handleBack = () => {
+    navigate(-1); // Go back to the previous page
   };
 
   return (
-    <div className="back-container">
-      <a href="#" className="back-arrow" onClick={goBack}><span className="arrow-left">&#8592;</span></a>
+    <div>
+      <button className='back-arrow' onClick={handleBack}>Back</button>
     </div>
   );
-};
+}
+
+export default BackButton;
