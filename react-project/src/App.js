@@ -1,5 +1,5 @@
 import NavBar from "./components/Nav.js"
-import SeedSelect from "./components/seed-select.js";
+import SeedSelect from "./components/SeedSelect.js";
 
 function App() {
   return (

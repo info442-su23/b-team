@@ -1,9 +1,9 @@
+import GoBackButton from "./GoBackButton";
+
 export default function SeedSelect() {
   return (
     <body className="seed-select-page">
-        <div className="back-container">
-            <a href="#" className="back-arrow"><span className="arrow-left">&#8592;</span></a>
-        </div>
+        {/* <GoBackButton /> */}
         <hr />
         <h1 className="seed-levels">easy</h1>
         <div className="container-easy">
