@@ -3,10 +3,10 @@ import SeedSelect from "./components/SeedSelect.js";
 
 function App() {
   return (
-    <div className="App">
-      <NavBar />
-      <SeedSelect />
-    </div>
+      <div className="App">
+        <NavBar />
+        <SeedSelect />
+      </div>
   );
 }
 
