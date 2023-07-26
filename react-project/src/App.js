@@ -1,6 +1,10 @@
 import NavBar from "./components/Nav.js"
 import SeedSelect from "./components/SeedSelect.js";
 import CompletePlantNewSeed from "./components/CompletePlantNewSeed.js";
+import LandingPage from "./components/LandingPage.js";
+import InstructionPage from "./components/InstructionPage.js";
+import NavDemo from "./components/NavDemo.js";
+import GardenPage from "./components/GardenPage.js";
 
 function App() {
   return (
@@ -8,6 +12,12 @@ function App() {
       <NavBar />
       <SeedSelect />
       <CompletePlantNewSeed />
+      <LandingPage />
+      {/* <InstructionPage /> */}
+      {/* <NavDemo /> */}
+      {/* <SeedSelect /> */}
+      {/* <NavBar /> */}
+      {/* <GardenPage /> */}
     </div>
   );
 }

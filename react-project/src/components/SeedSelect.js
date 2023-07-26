@@ -1,6 +1,6 @@
 import GoBackButton from "./GoBackButton";
 import NextButton from "./NextButton";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+// import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 export default function SeedSelect() {
   return (
