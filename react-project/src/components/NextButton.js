@@ -4,9 +4,9 @@ export default function NextButton() {
 
   return (
     <div className="start-button">
-      {/* <Link to="/garden"> */}
+      <Link to="/home">
         <button className="next-button">Start</button>
-      {/* </Link> */}
+      </Link>
     </div>
   );
 };
