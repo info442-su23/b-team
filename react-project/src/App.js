@@ -1,4 +1,5 @@
 import NavBar from "./components/Nav.js"
+import QuizInstructions from "./components/QuizInstructions.js";
 import SeedSelect from "./components/SeedSelect.js";
 import CompletePlantNewSeed from "./components/CompletePlantNewSeed.js";
 import LandingPage from "./components/LandingPage.js";
@@ -10,6 +11,7 @@ function App() {
   return (
     <div className="App">
       <NavBar />
+      <QuizInstructions />
       <SeedSelect />
       <CompletePlantNewSeed />
       <LandingPage />
