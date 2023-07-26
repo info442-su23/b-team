@@ -1,9 +1,11 @@
 import NavBar from "./components/Nav.js"
+import SeedSelect from "./components/seed-select.js";
 
 function App() {
   return (
     <div className="App">
       <NavBar />
+      <SeedSelect />
     </div>
   );
 }
