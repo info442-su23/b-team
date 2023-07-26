@@ -1,14 +1,15 @@
-import './index.css';
+import NavBar from "./components/Nav.js"
+import SeedSelect from "./components/SeedSelect.js";
 
 function App() {
   return (
     <div className="App">
-      {/* <NavBar /> */}
-      
+      <NavBar />
+      <SeedSelect />
+
     </div>
   );
 }
-
 
 // https://www.youtube.com/watch?v=i7oL_K_FmM8
 // function setCookie(name, value){
