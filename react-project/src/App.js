@@ -7,48 +7,46 @@ import InstructionPage from "./components/InstructionPage.js";
 import NavDemo from "./components/NavDemo.js";
 import GardenPage from "./components/GardenPage.js";
 import HomePage from "./components/HomePage.js";
-import { BrowserRouter, Routes, Route} from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom'
 
-function App() {
-  return (
-    <BrowserRouter>
-      <div className="App">
-        <NavBar />
-        <SeedSelect />
-      </div>
-      <Routes>
-        <Route>
-            <Route path="/home" element={<HomePage />} />
-            {/* Add other routes for other components/pages */}
-        </Route>
-      </Routes>
-    </BrowserRouter>
+// function App() {
+//   return (
+//     <BrowserRouter>
+//       <div className="App">
+//         <NavBar />
+//         <SeedSelect />
+//       </div>
+//       <Routes>
+//         <Route>
+//           <Route path="/home" element={<HomePage />} />
+//           {/* Add other routes for other components/pages */}
+//         </Route>
+//       </Routes>
+//     </BrowserRouter>
+//   );
+// }
 
-// app() structure?
-{/*
-function App() {
+// Correct and working model
+function App(props) {
   return (
     <div className="App">
-      <NavBar />
-      <QuizInstructions />
-      <SeedSelect />
-      <CompletePlantNewSeed />
-      <LandingPage />
-      {/* <InstructionPage /> */}
-      {/* <NavDemo /> */}
-      {/* <SeedSelect /> */}
-      {/* <NavBar /> */}
-      {/* <GardenPage /> */}
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="garden" element={<GardenPage />} />
+        <Route path="games" element={<QuizInstructions />} />
+        {/* <LandingPage /> */}
+        {/* <InstructionPage /> */}
+        {/* <NavDemo /> */}
+        {/* <SeedSelect /> */}
+        {/* <NavBar /> */}
+        {/* <GardenPage /> */}
+        {/* <HomePage /> */}
+        {/* <QuizInstructions /> */}
+      </Routes>
     </div>
   );
 }
-*/}
 
-// The original app.js code
-{/* <div className="App">
-  <NavBar />
-  <SeedSelect />
-</div> */}
 
 // https://www.youtube.com/watch?v=i7oL_K_FmM8
 // function setCookie(name, value){

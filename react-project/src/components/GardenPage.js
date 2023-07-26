@@ -1,6 +1,10 @@
+import React from 'react';
+import NavBar from './Nav';
+
 export default function GardenPage() {
     return (
         <body>
+            <NavBar />
             <a href="#" className="back-arrow"><span className="arrow-left">&#8592;</span></a>
 
             <div className="container-demo">

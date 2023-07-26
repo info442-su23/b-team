@@ -1,6 +1,10 @@
+import React from 'react';
+import NavBar from './Nav';
+
 export default function QuizInstructions() {
   return (
     <body>
+      <NavBar />
       <h1>Quiz</h1>
       <h2>Choose the correct answer to earn energy points. Learn about food waste along the way.</h2>
       <div className="button">

@@ -1,3 +1,5 @@
+import React from 'react';
+
 export default function CompletePlantNewSeed() {
   return (
     <body className="seed-select-page">
