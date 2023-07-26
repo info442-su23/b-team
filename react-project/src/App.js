@@ -1,12 +1,13 @@
 import NavBar from "./components/Nav.js"
 import SeedSelect from "./components/SeedSelect.js";
+import CompletePlantNewSeed from "./components/CompletePlantNewSeed.js";
 
 function App() {
   return (
     <div className="App">
       <NavBar />
       <SeedSelect />
-
+      <CompletePlantNewSeed />
     </div>
   );
 }
