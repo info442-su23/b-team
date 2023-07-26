@@ -194,6 +194,174 @@ hr {
   text-decoration: none;
 }
 
+/* Landing Page */
+body {
+  background-color: #6CBC96;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  /* Arrange elements vertically */
+  justify-content: center;
+  /* Center items horizontally */
+  align-items: center;
+}
+
+img.landing-page {
+  max-width: 100%;
+  /* Limit image size to fit the container */
+  max-height: 100vh;
+  /* Limit image height to fit the viewport */
+}
+
+header.landing-page {
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  /* Take full width */
+}
+
+h1.landing-page {
+  font-size: 60px;
+  margin: 10px;
+}
+
+h2.landing-page {
+  padding-left: 15rem;
+  padding-right: 15rem;
+}
+
+.start-button-landing {
+  background-color: white;
+  color: #6CBC96;
+  font-size: 30px;
+  padding: 20px 40px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.arrow-right {
+  margin-left: 10px;
+  color: #6CBC96;
+}
+
+.containerlanding-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Instructions page */
+.back-arrow {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: white;
+  font-size: 70px;
+  text-decoration: none;
+}
+
+ul.instruction {
+  margin-top: 1rem;
+  text-align: left;
+  padding-left: 26rem;
+  padding-right: 13rem;
+}
+
+li.instruction {
+  list-style: none;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.skip-button-instruction {
+  background-color: #6CBC96;
+  color: white;
+  text-decoration: underline;
+  border: 5px solid white;
+  font-size: 30px;
+  padding: 15px 35px;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+.next-button-instruction {
+  background-color: white;
+  color: #6CBC96;
+  font-size: 30px;
+  padding: 20px 30px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.button-container-instruction {
+  display: flex;
+  justify-content: right;
+  margin-top: 3rem;
+  padding-right: 5rem;
+}
+
+.container-instruction h1 {
+  margin-top: 5rem;
+  font-size: 60px;
+}
+
+/* Navigation Demo Page */
+.navigation-bar-demo h1 {
+  font-size: 30px;
+  margin: 10px;
+}
+
+.container-demo {
+  padding-top: 80px;
+}
+
+.card-containers-demo {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: white;
+  color: black;
+  margin: 10px;
+  min-width: 50px;
+  max-width: 200px;
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  flex-basis: auto;
+}
+
+.card p {
+  font-size: 20px;
+}
+
+/* Garden page */
+.garden-plot-empty {
+  width: 50vh;
+  max-width: 100%;
+  margin-top: 3rem;
+  height: auto;
+  display: block;
+}
+
+img.garden {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 @media (max-width: 1000px) {
   img {
     max-width: 100%;
@@ -248,3 +416,134 @@ hr {
     padding: 0;
   }
 }
+
+/* from robert.css */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #6CBC96;
+  color: white;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace, 'Karla', sans-serif;;
+}
+
+article#quiz-score {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  text-align: center;
+  padding: 20px;
+  font-family: 'Karla';
+  font-size: 16px;
+  font-weight: bold;
+}
+
+img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  height: 25%;
+  background-color: white;
+  border-radius: 20px;
+}
+
+img#garden {
+  background-color: white;
+  padding: 5%;
+}
+
+button {
+  padding: 0;
+  border: none;
+  background: none;
+  font-size: inherit;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* Button styles */
+.arrow-button {
+  display: flex;
+  padding: 10px 20px;
+  background-color: white;
+  color: #6CBC96;
+  font-size: 16px;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  margin-top: 10%;
+  margin-right: 10%;
+}
+
+#arrow {
+  width: 10px;
+  height: 10px;
+  padding: 5%;
+}
+
+img.sun {
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+  margin-left: 35%;
+}
+
+a {
+  display: flex;
+  justify-content: right;
+}
+
+section.sun {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 10%;
+}
+
+section.sun > p {
+  color:black
+}
+
+section#select-new-seed {
+  display: flex;
+}
+
+div.container-new-seed {
+  display: flex;
+  align-items: center;
+}
+
+div.energypoints-container {
+  width: 300px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+progress {
+  width: 100%;
+  height: 30px;
+  background-color: #f1f1f1;
+}
+
+progress::-webkit-progress-value {
+  background-color: white;
+}
+
+#navbar-sun {
+  background-color: transparent;
+}
+/* end robert.css */

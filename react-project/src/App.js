@@ -1,5 +1,11 @@
 import NavBar from "./components/Nav.js"
+import QuizInstructions from "./components/QuizInstructions.js";
 import SeedSelect from "./components/SeedSelect.js";
+import CompletePlantNewSeed from "./components/CompletePlantNewSeed.js";
+import LandingPage from "./components/LandingPage.js";
+import InstructionPage from "./components/InstructionPage.js";
+import NavDemo from "./components/NavDemo.js";
+import GardenPage from "./components/GardenPage.js";
 import HomePage from "./components/HomePage.js";
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
 
@@ -17,8 +23,26 @@ function App() {
         </Route>
       </Routes>
     </BrowserRouter>
+
+// app() structure?
+{/*
+function App() {
+  return (
+    <div className="App">
+      <NavBar />
+      <QuizInstructions />
+      <SeedSelect />
+      <CompletePlantNewSeed />
+      <LandingPage />
+      {/* <InstructionPage /> */}
+      {/* <NavDemo /> */}
+      {/* <SeedSelect /> */}
+      {/* <NavBar /> */}
+      {/* <GardenPage /> */}
+    </div>
   );
 }
+*/}
 
 // The original app.js code
 {/* <div className="App">
