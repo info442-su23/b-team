@@ -3,12 +3,8 @@ import './index.css';
 function App() {
   return (
     <div className="App">
-<<<<<<< HEAD
       {/* <NavBar /> */}
-=======
-      <header className="App-header">
-      </header>
->>>>>>> 15e3a1f098cc828e05a98174dcb9c27f11d3d004
+      
     </div>
   );
 }
