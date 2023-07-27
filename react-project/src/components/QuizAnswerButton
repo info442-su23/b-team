@@ -1,0 +1,13 @@
+import React, { useState } from 'react';
+
+export default function QuizAnswerButton() {
+  const [clicked, setClicked] = useState(false);
+
+  const handleClick = () => {
+    setClicked(true);
+  };
+
+  return (
+    <button className={`answer-block ${clicked ? 'clicked' : ''}`} onClick={handleClick}>62</button>
+  );
+}
