@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function NavBar() {
 
@@ -8,7 +8,7 @@ export default function NavBar() {
             <nav className="navbar">
                 <ul>
                     <img src="img/logo.png" className="logo" alt="logo" />
-                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/home">Home</Link></li>
                     <li><Link to="/garden">Garden</Link></li>
                     <li><Link to="/games">Games</Link></li>
                     <li><Link to="/diy">DIY</Link></li>

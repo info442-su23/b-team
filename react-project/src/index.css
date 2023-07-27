@@ -100,7 +100,7 @@ div.container-easy {
   grid-template-columns: repeat(3, 1fr);
   gap: 50px;
   height: 250px;
-  max-width: 600px;
+  max-width: 1000px;
   margin: 20px 375px;
   margin-bottom: 100px;
 }
@@ -110,7 +110,7 @@ div.container-med {
   grid-template-columns: repeat(3, 1fr);
   gap: 50px;
   height: 250px;
-  max-width: 600px;
+  max-width: 1000px;
   margin: 20px 375px;
   margin-bottom: 100px;
 }
@@ -120,7 +120,7 @@ div.container-hard {
   grid-template-columns: repeat(3, 1fr);
   gap: 50px;
   height: 250px;
-  max-width: 600px;
+  max-width: 1000px;
   margin: 20px 375px;
   margin-bottom: 100px;
 }
@@ -171,7 +171,6 @@ button.next-button-seed {
   border-radius: 5px;
   cursor: pointer;
   font-size: 25px;
-  position: absolute;
   bottom: 30px;
   right: 30px;
 }
