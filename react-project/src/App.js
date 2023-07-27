@@ -1,4 +1,3 @@
-import NavBar from "./components/Nav.js"
 import QuizInstructions from "./components/QuizInstructions.js";
 import SeedSelect from "./components/SeedSelect.js";
 import CompletePlantNewSeed from "./components/CompletePlantNewSeed.js";
@@ -16,23 +15,26 @@ function App(props) {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="garden" element={<GardenPage />} />
-        <Route path="games" element={<QuizInstructions />} />
-        <Route path="quizanswer" element={<QuizAnswer />} />
-        {/* <LandingPage /> */}
-        {/* <InstructionPage /> */}
-        {/* <NavDemo /> */}
-        {/* <SeedSelect /> */}
-        {/* <NavBar /> */}
-        {/* <GardenPage /> */}
-        {/* <HomePage /> */}
-        {/* <QuizInstructions /> */}
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/instruction" element={<InstructionPage />} />
+        <Route path="/navdemo" element={<NavDemo />} />
+        <Route path="/seedselect" element={<SeedSelect />} />
+        <Route path="/home" element={<HomePage />} />
+        <Route path="/garden" element={<GardenPage />} />
+        <Route path="/games" element={<QuizInstructions />} />
       </Routes>
     </div>
   );
 }
 
+{/* <LandingPage /> */ }
+{/* <InstructionPage /> */ }
+{/* <NavDemo /> */ }
+{/* <SeedSelect /> */ }
+{/* <NavBar /> */ }
+{/* <GardenPage /> */ }
+{/* <HomePage /> */ }
+{/* <QuizInstructions /> */ }
 
 // https://www.youtube.com/watch?v=i7oL_K_FmM8
 // function setCookie(name, value){

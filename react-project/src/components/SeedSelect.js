@@ -1,13 +1,12 @@
 import React from 'react';
-import GoBackButton from "./GoBackButton";
-import NextButton from "./NextButton";
-// import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
+import BackButton from './GoBackButton';
 
 export default function SeedSelect() {
   return (
     <body className="seed-select-page" >
       <div className="back-container">
-        <a href="#" className="back-arrow"><span className="arrow-left">&#8592;</span></a>
+        <a href="#" className="back-arrow"><BackButton /></a>
       </div>
       <hr className="seed" />
       <h1 className="seed-levels">easy</h1>
@@ -31,7 +30,7 @@ export default function SeedSelect() {
         <div className="box"><img src="img/seed.jpeg" className="seed-select" /></div>
       </div>
       <div className="start-button-seed">
-        <button className="next-button-seed">Start</button>
+        <button className="next-button-seed"><Link to="/home">Start</Link></button>
       </div>
     </body>
   );

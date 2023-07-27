@@ -1,9 +1,11 @@
 import React from 'react';
+import { Link } from "react-router-dom";
+import BackButton from './GoBackButton';
 
 export default function InstructionPage() {
     return (
         <body>
-            <a href="#" className="back-arrow"><span className="arrow-left-instruction">&#8592;</span></a>
+            <a href="#" className="back-arrow"><BackButton /></a>
             <div className="container-instruction">
                 <header>
                     <h1>How to Play</h1>
@@ -17,9 +19,9 @@ export default function InstructionPage() {
                 </header>
             </div>
             <div className="button-container-instruction">
-                <button className="skip-button-instruction"><strong>Skip</strong></button>
+                <button className="skip-button-instruction"><strong><Link to="/home">Skip</Link></strong></button>
                 <div className="container-instruction">
-                    <button className="next-button-instruction"><strong>Next</strong> <span className="arrow-right-instruction">&#10148;</span> </button>
+                    <button className="next-button-instruction"><strong><Link to="/navdemo">Next</Link></strong> <span className="arrow-right-instruction">&#10148;</span> </button>
                 </div>
             </div>
         </body>
