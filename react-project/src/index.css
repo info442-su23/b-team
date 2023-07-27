@@ -417,6 +417,34 @@ img.garden {
   }
 }
 
+  .quiz-answers-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .answer-block {
+    background-color: white;
+    color: black;
+    font-size: 30px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .answer-block:active {
+    outline: black;
+  }
+
+  .clicked {
+    outline: 2px solid #ff9800;
+  }
+
+  .margin {
+    margin-top: 10%;
+    margin-left: 20%;
+  }
 /* from robert.css */
 /* body {
   margin: 0;

@@ -7,6 +7,7 @@ import NavDemo from "./components/NavDemo.js";
 import GardenPage from "./components/GardenPage.js";
 import HomePage from "./components/HomePage.js";
 import { Routes, Route, Navigate } from 'react-router-dom'
+import QuizAnswer from "./components/QuizAnswer.js";
 
 
 // working model
