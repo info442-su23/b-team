@@ -3,7 +3,18 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom'
-// import reportWebVitals from './reportWebVitals';
+import { initializeApp } from 'firebase/app';
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDsL20adfD3HXchxpj__6qT4pWuC0yVlI4",
+  authDomain: "info442-biobuddies.firebaseapp.com",
+  projectId: "info442-biobuddies",
+  storageBucket: "info442-biobuddies.appspot.com",
+  messagingSenderId: "151659787237",
+  appId: "1:151659787237:web:b809ed533289359dbcb50c"
+};
+
+initializeApp(firebaseConfig);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
