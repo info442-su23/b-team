@@ -1,14 +1,19 @@
-// import React, { useState } from 'react';
+// import React from "react";
+// import { Link } from "react-router-dom";
 
-// export default function QuizAnswerButton() {
-//   const [clicked, setClicked] = useState(false);
+//  function QuizAnswerButton() {
 
 //   const handleClick = () => {
-//     setClicked(true);
+//     <section className="container-instruction margin">
+//       <button className="next-button-instruction"><strong><Link to="/seedselect">Next</Link></strong> <span className="arrow-right-instruction">&#10148;</span> </button>
+//     </section>
 //   };
-//   const clickedTag = 'answer-block ' + (clicked ? 'clicked' : '');
 
 //   return (
-//     <button className={clickedTag} onClick={handleClick}>62</button>
+//     <div>
+//       <button className='answer-block' onClick={handleClick}>46%</button>
+//     </div>
 //   );
 // }
+
+// export default QuizAnswerButton;
