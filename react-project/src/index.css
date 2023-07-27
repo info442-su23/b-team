@@ -445,6 +445,23 @@ img.garden {
     margin-top: 10%;
     margin-left: 20%;
   }
+
+  .correct-answer {
+    display: flex;
+    flex-direction: row;
+  }
+
+
+  .text-container {
+    max-width: 400px; /* Set the maximum width of the container */
+    padding: 10px; /* Optional: Add padding for better appearance */
+  }
+
+  .text-container > p {
+    overflow-wrap: break-word; /* This will force the words to wrap if they exceed the container width */
+  }
+
+
 /* from robert.css */
 /* body {
   margin: 0;

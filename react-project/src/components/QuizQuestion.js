@@ -3,7 +3,7 @@ import NavBar from './Nav';
 import BackButton from './GoBackButton';
 import { Link } from 'react-router-dom';
 
-export default function QuizAnswer() {
+export default function QuizQuestion() {
   return (
     <body>
       <NavBar />

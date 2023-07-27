@@ -1,6 +1,7 @@
 import React from 'react';
 import NavBar from './Nav';
 import BackButton from './GoBackButton';
+import { Link } from 'react-router-dom';
 
 export default function QuizInstructions() {
   return (
@@ -10,7 +11,7 @@ export default function QuizInstructions() {
       <h1>Quiz</h1>
       <h2>Choose the correct answer to earn energy points. Learn about food waste along the way.</h2>
       <div className="button">
-        <button className="start-button"><strong>Start</strong> <span class="arrow-right">&#10148;</span> </button>
+        <button className="start-button"><strong><Link to="/quizquestion">Start</Link></strong> <span class="arrow-right">&#10148;</span> </button>
       </div>
     </body>
   )

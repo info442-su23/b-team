@@ -7,6 +7,7 @@ import NavDemo from "./components/NavDemo.js";
 import GardenPage from "./components/GardenPage.js";
 import HomePage from "./components/HomePage.js";
 import { Routes, Route, Navigate } from 'react-router-dom'
+import QuizQuestion from "./components/QuizQuestion.js";
 import QuizAnswer from "./components/QuizAnswer.js";
 
 
@@ -22,6 +23,9 @@ function App(props) {
         <Route path="/home" element={<HomePage />} />
         <Route path="/garden" element={<GardenPage />} />
         <Route path="/games" element={<QuizInstructions />} />
+        <Route path="/quizquestion" element={<QuizQuestion />} />
+        <Route path="/correctanswer1" element={<QuizAnswer />} />
+        {/* <Route path="/quizcomplete" element={<QuizComplete />} /> */}
       </Routes>
     </div>
   );
