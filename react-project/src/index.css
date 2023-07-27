@@ -461,6 +461,22 @@ img.garden {
     overflow-wrap: break-word; /* This will force the words to wrap if they exceed the container width */
   }
 
+  .energy-points {
+    background-color: white;
+    color: black;
+    border-radius: 10%;
+    padding: 5%;
+    margin-bottom: 10%;
+  }
+
+  img.sun {
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+    margin-left: 35%;
+    width: 200px;
+    height: 200px;
+  }
 
 /* from robert.css */
 /* body {
@@ -538,12 +554,7 @@ button {
   padding: 5%;
 }
 
-img.sun {
-  display: flex;
-  justify-content: center;
-  margin-top: 10%;
-  margin-left: 35%;
-}
+
 
 a {
   display: flex;

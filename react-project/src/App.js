@@ -9,6 +9,8 @@ import HomePage from "./components/HomePage.js";
 import { Routes, Route, Navigate } from 'react-router-dom'
 import QuizQuestion from "./components/QuizQuestion.js";
 import QuizAnswer from "./components/QuizAnswer.js";
+import QuizScore from "./components/QuizScore.js";
+import DIY from "./components/DIY.js";
 
 
 // working model
@@ -25,7 +27,8 @@ function App(props) {
         <Route path="/games" element={<QuizInstructions />} />
         <Route path="/quizquestion" element={<QuizQuestion />} />
         <Route path="/correctanswer1" element={<QuizAnswer />} />
-        {/* <Route path="/quizcomplete" element={<QuizComplete />} /> */}
+        <Route path="/quizscore" element={<QuizScore />} />
+        <Route path="/diy" element={<DIY />} />
       </Routes>
     </div>
   );
