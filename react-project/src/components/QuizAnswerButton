@@ -1,13 +1,14 @@
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
 
-export default function QuizAnswerButton() {
-  const [clicked, setClicked] = useState(false);
+// export default function QuizAnswerButton() {
+//   const [clicked, setClicked] = useState(false);
 
-  const handleClick = () => {
-    setClicked(true);
-  };
+//   const handleClick = () => {
+//     setClicked(true);
+//   };
+//   const clickedTag = 'answer-block ' + (clicked ? 'clicked' : '');
 
-  return (
-    <button className={`answer-block ${clicked ? 'clicked' : ''}`} onClick={handleClick}>62</button>
-  );
-}
+//   return (
+//     <button className={clickedTag} onClick={handleClick}>62</button>
+//   );
+// }
