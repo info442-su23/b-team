@@ -470,7 +470,6 @@ img.garden {
     font-weight: bold;
     border-radius: 10%;
     padding: 5%;
-    margin-bottom: 10%;
   }
 
   img.energy {
@@ -494,6 +493,7 @@ img.garden {
     color: white;
     font-size: 700px;
     text-decoration: none;
+    margin-top: 5%;
   }
 
   button.position {
@@ -512,6 +512,10 @@ img.garden {
 
   #compost-diy {
     display: flex;
+  }
+
+  .compost-list{
+    text-align: left;
   }
 
 /* from robert.css */

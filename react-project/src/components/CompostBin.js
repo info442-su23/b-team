@@ -19,7 +19,7 @@ export default function CompostBin() {
         <section>
           <h1>COMPOST BIN DIY</h1>
           <p>What you need:</p>
-          <ul>
+          <ul className='compost-list'>
             <li>10 Scoops of Dirt</li>
             <li>1 Plastic Storage Box</li>
             <li>Shovel</li>
