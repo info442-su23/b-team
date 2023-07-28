@@ -510,6 +510,17 @@ img.garden {
     margin-top: 20%;
   }
 
+  #game-selection {
+    display: flex;
+    justify-content: center;
+  }
+
+  .column {
+    width: 10%;
+    height: 10%;
+    margin: 5%;
+  }
+
   .selected {
     outline: solid black;
   }
