@@ -27,7 +27,7 @@ function App(props) {
         <Route path="/garden" element={<GardenPage />} />
         <Route path="/quizinstruction" element={<QuizInstructions />} />
         <Route path="/quizquestion" element={<QuizQuestion />} />
-        <Route path="/correctanswer1" element={<QuizAnswer />} />
+        <Route path="/correctanswer" element={<QuizAnswer />} />
         <Route path="/quizscore" element={<QuizScore />} />
         <Route path="/diy" element={<DIY />} />
         <Route path="/sortscore" element={<SortScore />} />
