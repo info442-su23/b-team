@@ -1,12 +1,13 @@
+import { Route } from "react-router-dom";
 import NavBar from "./components/Nav.js"
 import SeedSelect from "./components/SeedSelect.js";
+import GameSelection from "./components/GameSelection.js";
 
 function App() {
   return (
     <div className="App">
       <NavBar />
-      <SeedSelect />
-
+      <Route path="/games" element={<GameSelection />} /></Route>
     </div>
   );
 }
