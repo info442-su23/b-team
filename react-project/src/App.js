@@ -12,6 +12,7 @@ import QuizAnswer from "./components/QuizAnswer.js";
 import QuizScore from "./components/QuizScore.js";
 import DIY from "./components/DIY.js";
 import SortScore from "./components/SortScore.js";
+import CompostBin from "./components/CompostBin.js";
 
 
 // working model
@@ -31,6 +32,7 @@ function App(props) {
         <Route path="/quizscore" element={<QuizScore />} />
         <Route path="/diy" element={<DIY />} />
         <Route path="/sortscore" element={<SortScore />} />
+        <Route path="/compostbin" element={<CompostBin />} />
       </Routes>
     </div>
   );

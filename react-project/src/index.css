@@ -510,6 +510,10 @@ img.garden {
     margin-top: 20%;
   }
 
+  #compost-diy {
+    display: flex;
+  }
+
 /* from robert.css */
 /* body {
   margin: 0;
