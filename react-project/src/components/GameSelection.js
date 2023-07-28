@@ -3,7 +3,7 @@ import NavBar from "./Nav"
 export default function GameSelection() {
   return (
     <body>
-      <Navbar />
+      <NavBar />
       <h1>Select a Game!</h1>
       <div class="row">
         <div class="column">
