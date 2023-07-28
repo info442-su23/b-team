@@ -11,6 +11,7 @@ import QuizQuestion from "./components/QuizQuestion.js";
 import QuizAnswer from "./components/QuizAnswer.js";
 import QuizScore from "./components/QuizScore.js";
 import DIY from "./components/DIY.js";
+import SortScore from "./components/SortScore.js";
 
 
 // working model
@@ -29,6 +30,7 @@ function App(props) {
         <Route path="/correctanswer1" element={<QuizAnswer />} />
         <Route path="/quizscore" element={<QuizScore />} />
         <Route path="/diy" element={<DIY />} />
+        <Route path="/sortscore" element={<SortScore />} />
       </Routes>
     </div>
   );
