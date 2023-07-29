@@ -448,7 +448,11 @@ img.garden {
 
   .correct-answer {
     display: flex;
-    flex-direction: row;
+  }
+
+  .correct-answer > section {
+    margin-right: 10%;
+    margin-top: 15%;
   }
 
 
@@ -515,5 +519,9 @@ img.garden {
   }
 
   .unselected {
-    opacity: 85%;
+    opacity: 75%;
+  }
+
+  .hidden {
+    display: none;
   }

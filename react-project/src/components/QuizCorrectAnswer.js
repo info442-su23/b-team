@@ -2,19 +2,19 @@ import React from 'react';
 import NavBar from './Nav';
 import BackButton from './GoBackButton';
 import { Link } from 'react-router-dom';
-import { useLocation } from 'react-router-dom';
+// import { useLocation } from 'react-router-dom';
 
 export default function QuizCorrectAnswer() {
 
-  const location = useLocation();
-  const { currentQuestion, selectedButtonId } = location.state;
+  // const location = useLocation();
+  // const { currentQuestion, selectedButtonId } = location.state;
 
 
   return (
     <body>
       <NavBar />
       <a href="#" className="back-arrow"><BackButton /></a>
-      <h1>Question {currentQuestion + 1}/5</h1>
+      <h1>Question {1}/5</h1>
       <article className='correct-answer'>
         <section>
           {/* <h1>{selectedAnswer.correct ? 'Correct!' : 'Incorrect'}</h1> */}
@@ -33,7 +33,7 @@ export default function QuizCorrectAnswer() {
         </section>
       </article>
       <section className="container-instruction margin">
-          <button className="next-button-instruction"><strong><Link to="/quizscore">Next</Link></strong> <span className="arrow-right-instruction">&#10148;</span> </button>
+          <button className="next-button-instruction"><strong><Link to="/quizquestion">Next</Link></strong> <span className="arrow-right-instruction">&#10148;</span> </button>
       </section>
 
     </body>

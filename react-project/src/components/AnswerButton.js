@@ -1,19 +1,36 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-export default function AnswerButton({ currentQuestion }) {
+export default function AnswerButton({
+  currentQuestion,
+  showCorrectAnswer,
+  setShowCorrectAnswer,
+  handleNextQuestion,
+  currentQuestionIndex,
+  endQuiz
+}) {
   const [selectedButtonId, setSelectedButtonId] = useState(null);
-  const [showNewButton, setShowNewButton] = useState(false);
+  const [showSubmitButton, setShowSubmitButton] = useState(false);
+  const [showNextButton, setShowNextButton] = useState(false);
 
   const buttons = currentQuestion.answers
 
   // When answer is selected, it becomes outlined & "submit answer" button appears
-  const handleClick = (buttonId) => {
+  const answerClick = (buttonId) => {
     setSelectedButtonId(buttonId);
-    setShowNewButton(true);
+    setShowSubmitButton(true);
   };
 
-  const selectedButton = buttons.find((button) => button.id === selectedButtonId);
+  const submitClick = () => {
+    setShowCorrectAnswer(true);
+    setShowSubmitButton(false);
+    setShowNextButton(true);
+  }
+
+  const nextClick = () => {
+    setShowNextButton(false);
+    handleNextQuestion();
+  }
 
   return (
     <article>
@@ -24,22 +41,37 @@ export default function AnswerButton({ currentQuestion }) {
             className={`answer-block ${
               selectedButtonId === button.id ? 'selected' : 'unselected'
             }`}
-            onClick={() => handleClick(button.id)}
+            onClick={() => answerClick(button.id)}
+            disabled={showNextButton}
           >
             {button.label}
           </button>
         ))}
       </section>
-      {showNewButton && (
-        <button className="next-button-instruction heading">
-          <strong>
-          <Link to="/correctanswer" state={ currentQuestion }>Submit</Link>
-          </strong>{" "}
-          <span className="arrow-right-instruction">&#10148;</span>{" "}
-        </button>
+      {showSubmitButton && (
+        <button
+        className="next-button-instruction heading"
+        onClick={ submitClick }
+        >Submit</button>
+      )}
+      {showNextButton && (
+        <>
+        {endQuiz ? (
+          <Link to="/quizscore">
+            <button className="next-button-instruction heading">Score</button>
+          </Link>
+        ) : (
+          <button className="next-button-instruction heading" onClick={nextClick}>
+            Next Question
+          </button>
+        )}
+      </>
       )}
     </article>
   );
 }
+
+{/* <span className="arrow-right-instruction">&#10148;</span>{" "} */}
+
 
 
