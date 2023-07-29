@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-export default function AnswerButton({ buttons }) {
+export default function AnswerButton({ currentQuestion }) {
   const [selectedButtonId, setSelectedButtonId] = useState(null);
   const [showNewButton, setShowNewButton] = useState(false);
+
+  const buttons = currentQuestion.answers
 
   // When answer is selected, it becomes outlined & "submit answer" button appears
   const handleClick = (buttonId) => {
@@ -31,7 +33,7 @@ export default function AnswerButton({ buttons }) {
       {showNewButton && (
         <button className="next-button-instruction heading">
           <strong>
-            <Link to="/correctanswer">Submit</Link>
+          <Link to="/correctanswer" state={ currentQuestion }>Submit</Link>
           </strong>{" "}
           <span className="arrow-right-instruction">&#10148;</span>{" "}
         </button>

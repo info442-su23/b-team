@@ -9,7 +9,7 @@ import GardenPage from "./components/GardenPage.js";
 import HomePage from "./components/HomePage.js";
 import { Routes, Route, Navigate } from 'react-router-dom'
 import QuizQuestion from "./components/QuizQuestion.js";
-import QuizAnswer from "./components/QuizAnswer.js";
+import QuizCorrectAnswer from "./components/QuizCorrectAnswer.js";
 import QuizScore from "./components/QuizScore.js";
 import DIY from "./components/DIY.js";
 import SortScore from "./components/SortScore.js";
@@ -27,7 +27,7 @@ function App(props) {
         <Route path="/garden" element={<GardenPage />} />
         <Route path="/quizinstruction" element={<QuizInstructions />} />
         <Route path="/quizquestion" element={<QuizQuestion />} />
-        <Route path="/correctanswer" element={<QuizAnswer />} />
+        <Route path="/correctanswer" element={<QuizCorrectAnswer />} />
         <Route path="/quizscore" element={<QuizScore />} />
         <Route path="/diy" element={<DIY />} />
         <Route path="/sortscore" element={<SortScore />} />

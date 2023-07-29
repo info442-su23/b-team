@@ -40,7 +40,7 @@ export default function QuizQuestion() {
       <h1>Question {currentQuestionIndex + 1}/5</h1>
       <h2>{currentQuestion.question}</h2>
       <AnswerButton
-        buttons={currentQuestion.answers}
+        currentQuestion={currentQuestion}
         handleAnswerClick={handleAnswerClick}
       />
     </body>
