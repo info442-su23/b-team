@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-export default function AnswerButton() {
+export default function AnswerButton({ buttons }) {
   const [selectedButtonId, setSelectedButtonId] = useState(null);
   const [showNewButton, setShowNewButton] = useState(false);
 
@@ -11,16 +11,7 @@ export default function AnswerButton() {
     setShowNewButton(true);
   };
 
-  // 4 possible answers
-  const buttons = [
-    { id: 1, label: '7%', correct: false},
-    { id: 2, label: '22%', correct: true},
-    { id: 3, label: '62%', correct: false},
-    { id: 4, label: '46%', correct: false}
-  ];
-
   const selectedButton = buttons.find((button) => button.id === selectedButtonId);
-  const toValue = selectedButton?.correct ? "/correctanswer" : "/incorrectanswer";
 
   return (
     <article>
@@ -40,7 +31,7 @@ export default function AnswerButton() {
       {showNewButton && (
         <button className="next-button-instruction heading">
           <strong>
-            <Link to={toValue}>Submit</Link>
+            <Link to="/correctanswer">Submit</Link>
           </strong>{" "}
           <span className="arrow-right-instruction">&#10148;</span>{" "}
         </button>
