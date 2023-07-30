@@ -20,7 +20,7 @@ export default function SortAnswerButton() {
   ];
 
   const selectedButton = buttons.find((button) => button.id === selectedButtonId);
-  const toValue = selectedButton?.correct ? "/correctanswer" : "/incorrectanswer";
+  const toValue = selectedButton?.correct ? "/correctSort" : "/incorrectSort";
 
   return (
     <article>

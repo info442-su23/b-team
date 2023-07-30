@@ -11,7 +11,7 @@ export default function SortQuestion() {
             <a href="#" className="back-arrow"><BackButton /></a>
             <h1>Question 1/5</h1>
             <section className='sortingQuestion'>
-                <h2>What percentage of trash is food?</h2>
+                <h2>What bin would you use to dispose of an old cucumber?</h2>
                 <img src="img/trash_bins.webp" className='sortingPic' />
                 <SortAnswerButton />
             </section>
