@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import NavBar from './Nav';
 import BackButton from './GoBackButton';
 import AnswerButton from './AnswerButton';
@@ -25,7 +25,7 @@ const questions = [
     { id: 4, label: '4', correct: false }
     ],
     correctAnswer: 0,
-  },
+  }
   // add other questions go here
 ]
 
@@ -33,15 +33,22 @@ const questions = [
 export default function QuizQuestion() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [showCorrectAnswer, setShowCorrectAnswer] = useState(false);
+  const [isAnswerCorrect, setIsAnswerCorrect] = useState(false);
   const [endQuiz, setEndQuiz] = useState(false);
 
+  useEffect(() => {
+    console.log('Current question index:', currentQuestionIndex);
+  }, [currentQuestionIndex]);
+
+  // Cycles through each question until reaching the end of the list
   const handleNextQuestion = () => {
-    if (currentQuestionIndex < 2) {
+    if (currentQuestionIndex < questions.length - 1) {
       setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
       setShowCorrectAnswer(false);
+      setIsAnswerCorrect(false);
       console.log(currentQuestionIndex)
     } else {
-      console.log('else statement')
+      console.log('im here')
       setEndQuiz(true);
     }
   };
@@ -54,7 +61,7 @@ export default function QuizQuestion() {
       <a href="#" className="back-arrow"><BackButton /></a>
       <article className="correct-answer">
         <section className={ showCorrectAnswer ? ' ' : 'hidden'}>
-            <h1>Correct!</h1>{/* <h1>{selectedAnswer.correct ? 'Correct!' : 'Incorrect'}</h1> */}
+            <h1>{isAnswerCorrect ? 'Correct!' : 'Incorrect'}</h1>
             <div className='text-container'>
               <p>{ currentQuestion.note }</p>
             </div>
@@ -66,6 +73,7 @@ export default function QuizQuestion() {
             currentQuestion={ currentQuestion }
             showCorrectAnswer={ showCorrectAnswer }
             setShowCorrectAnswer={ setShowCorrectAnswer }
+            setIsAnswerCorrect={ setIsAnswerCorrect }
             handleNextQuestion={ handleNextQuestion }
             currentQuestionIndex={ currentQuestionIndex }
             endQuiz={ endQuiz }

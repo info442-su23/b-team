@@ -5,6 +5,7 @@ export default function AnswerButton({
   currentQuestion,
   showCorrectAnswer,
   setShowCorrectAnswer,
+  setIsAnswerCorrect,
   handleNextQuestion,
   currentQuestionIndex,
   endQuiz
@@ -22,9 +23,15 @@ export default function AnswerButton({
   };
 
   const submitClick = () => {
+    const selectedAnswer = currentQuestion.answers.find((answer) => answer.id === selectedButtonId);
+    const isCorrect = selectedAnswer?.correct ?? false;
+
+
     setShowCorrectAnswer(true);
     setShowSubmitButton(false);
     setShowNextButton(true);
+
+    setIsAnswerCorrect(isCorrect);
   }
 
   const nextClick = () => {
@@ -55,23 +62,17 @@ export default function AnswerButton({
         >Submit</button>
       )}
       {showNextButton && (
-        <>
-        {endQuiz ? (
-          <Link to="/quizscore">
-            <button className="next-button-instruction heading">Score</button>
-          </Link>
-        ) : (
-          <button className="next-button-instruction heading" onClick={nextClick}>
-            Next Question
-          </button>
+        <section>
+          <button className="next-button-instruction heading" onClick={ nextClick }>Next Question</button>
+        </section>
         )}
-      </>
+      {currentQuestionIndex === 1 && endQuiz && (
+        <Link to="/quizscore">
+          <button className="next-button-instruction heading">Score</button>
+        </Link>
       )}
     </article>
   );
 }
-
-{/* <span className="arrow-right-instruction">&#10148;</span>{" "} */}
-
 
 

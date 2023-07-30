@@ -37,15 +37,6 @@ function App(props) {
   );
 }
 
-{/* <LandingPage /> */ }
-{/* <InstructionPage /> */ }
-{/* <NavDemo /> */ }
-{/* <SeedSelect /> */ }
-{/* <NavBar /> */ }
-{/* <GardenPage /> */ }
-{/* <HomePage /> */ }
-{/* <QuizInstructions /> */ }
-
 // https://www.youtube.com/watch?v=i7oL_K_FmM8
 // function setCookie(name, value){
 //   const date = new Date();
