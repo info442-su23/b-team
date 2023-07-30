@@ -1,26 +1,43 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-export default function AnswerButton() {
+export default function AnswerButton({
+  currentQuestion,
+  showCorrectAnswer,
+  setShowCorrectAnswer,
+  setIsAnswerCorrect,
+  handleNextQuestion,
+  currentQuestionIndex,
+  endQuiz
+}) {
   const [selectedButtonId, setSelectedButtonId] = useState(null);
-  const [showNewButton, setShowNewButton] = useState(false);
+  const [showSubmitButton, setShowSubmitButton] = useState(false);
+  const [showNextButton, setShowNextButton] = useState(false);
+
+  const buttons = currentQuestion.answers
 
   // When answer is selected, it becomes outlined & "submit answer" button appears
-  const handleClick = (buttonId) => {
+  const answerClick = (buttonId) => {
     setSelectedButtonId(buttonId);
-    setShowNewButton(true);
+    setShowSubmitButton(true);
   };
 
-  // 4 possible answers
-  const buttons = [
-    { id: 1, label: '7%', correct: false},
-    { id: 2, label: '22%', correct: true},
-    { id: 3, label: '62%', correct: false},
-    { id: 4, label: '46%', correct: false}
-  ];
+  const submitClick = () => {
+    const selectedAnswer = currentQuestion.answers.find((answer) => answer.id === selectedButtonId);
+    const isCorrect = selectedAnswer?.correct ?? false;
 
-  const selectedButton = buttons.find((button) => button.id === selectedButtonId);
-  const toValue = selectedButton?.correct ? "/correctanswer" : "/incorrectanswer";
+
+    setShowCorrectAnswer(true);
+    setShowSubmitButton(false);
+    setShowNextButton(true);
+
+    setIsAnswerCorrect(isCorrect);
+  }
+
+  const nextClick = () => {
+    setShowNextButton(false);
+    handleNextQuestion();
+  }
 
   return (
     <article>
@@ -31,19 +48,28 @@ export default function AnswerButton() {
             className={`answer-block ${
               selectedButtonId === button.id ? 'selected' : 'unselected'
             }`}
-            onClick={() => handleClick(button.id)}
+            onClick={() => answerClick(button.id)}
+            disabled={showNextButton}
           >
             {button.label}
           </button>
         ))}
       </section>
-      {showNewButton && (
-        <button className="next-button-instruction heading">
-          <strong>
-            <Link to={toValue}>Submit</Link>
-          </strong>{" "}
-          <span className="arrow-right-instruction">&#10148;</span>{" "}
-        </button>
+      {showSubmitButton && (
+        <button
+        className="next-button-instruction heading"
+        onClick={ submitClick }
+        >Submit</button>
+      )}
+      {showNextButton && (
+        <section>
+          <button className="next-button-instruction heading" onClick={ nextClick }>Next Question</button>
+        </section>
+        )}
+      {currentQuestionIndex === 1 && endQuiz && (
+        <Link to="/quizscore">
+          <button className="next-button-instruction heading">Score</button>
+        </Link>
       )}
     </article>
   );
