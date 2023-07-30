@@ -9,7 +9,7 @@ import GardenPage from "./components/GardenPage.js";
 import HomePage from "./components/HomePage.js";
 import { Routes, Route, Navigate } from 'react-router-dom'
 import QuizQuestion from "./components/QuizQuestion.js";
-import QuizAnswer from "./components/QuizCorrectAnswer.js";
+import QuizCorrectAnswer from "./components/QuizCorrectAnswer.js";
 import QuizScore from "./components/QuizScore.js";
 import DIY from "./components/DIY.js";
 import SortScore from "./components/SortScore.js";
