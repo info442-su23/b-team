@@ -455,7 +455,6 @@ img.garden {
     margin-top: 15%;
   }
 
-
   .text-container {
     max-width: 400px; /* Set the maximum width of the container */
     padding: 10px; /* Optional: Add padding for better appearance */
@@ -474,7 +473,6 @@ img.garden {
     font-weight: bold;
     border-radius: 10%;
     padding: 5%;
-    margin-bottom: 10%;
   }
 
   img.energy {
@@ -498,30 +496,158 @@ img.garden {
     color: white;
     font-size: 700px;
     text-decoration: none;
+    margin-top: 5%;
   }
 
-  button.position {
-    background-color: white;
-    color: #6CBC96;
-    font-size: 30px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
+.answer-block:active {
+  outline: black;
+}
+
+.clicked {
+  outline: 2px solid #ff9800;
+}
+
+  #compost-diy {
+    display: flex;
   }
 
-  .heading {
-    margin-top: 20%;
+  .compost-list{
+    text-align: left;
   }
 
-  .selected {
-    outline: solid black;
-  }
-
-  .unselected {
-    opacity: 75%;
-  }
-
-  .hidden {
+  #hidden{
     display: none;
   }
+
+.margin {
+  margin-top: 10%;
+  margin-left: 20%;
+}
+
+.correct-answer {
+  display: flex;
+  flex-direction: row;
+}
+
+
+.text-container {
+  max-width: 400px;
+  /* Set the maximum width of the container */
+  padding: 10px;
+  /* Optional: Add padding for better appearance */
+}
+
+.text-container>p {
+  overflow-wrap: break-word;
+  /* This will force the words to wrap if they exceed the container width */
+}
+
+.energy-points {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  border-radius: 10%;
+  padding: 5%;
+  margin-bottom: 10%;
+}
+
+img.energy {
+  width: 200px;
+  height: 200px;
+}
+
+.button-padding {
+  margin-left: 65%;
+  margin-top: 20%;
+}
+
+article#quiz-score {
+  display: flex;
+  flex-direction: column;
+}
+
+.position {
+  top: 30px;
+  left: 30px;
+  color: white;
+  font-size: 700px;
+  text-decoration: none;
+}
+
+button.position {
+  background-color: white;
+  color: #6CBC96;
+  font-size: 30px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.heading {
+  margin-top: 20%;
+}
+
+#game-selection {
+  display: flex;
+  justify-content: center;
+}
+
+.column {
+  width: 10%;
+  height: 10%;
+  margin: 5%;
+}
+
+.selected {
+  outline: solid black;
+}
+
+.unselected {
+  opacity: 75%;
+}
+
+.custom-checkbox {
+  width: 30px;
+  height: 30px;
+  margin-right: 9px;
+  vertical-align: middle;
+}
+
+.custom-label {
+  display: inline-block;
+}
+
+body.questprompt {
+  text-align: left;
+}
+
+.checkbox-container {
+  margin-bottom: 30px;
+}
+
+img.sortingPic {
+  width: 80%;
+}
+
+.sortingQuestion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.next-button-instruction-sorting {
+  background-color: white;
+  color: #6CBC96;
+  font-size: 30px;
+  padding: 20px 30px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 30px;
+}

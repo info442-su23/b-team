@@ -1,24 +1,25 @@
 import NavBar from "./Nav"
+import { Link } from "react-router-dom"
 
 export default function GameSelection() {
   return (
     <body>
       <NavBar />
       <h1>Select a Game!</h1>
-      <div class="row">
+      <article id="game-selection">
         <div class="column">
-            <img src="quiz.jpeg" class="quiz" alt="quiz" />
+            <Link to="/quizinstruction"><img src="/img/quiz.jpeg" class="quiz" alt="quiz" /></Link>
             <h3>Quiz</h3>
         </div>
         <div class="column">
-            <img src="quest.png" class="quest" alt="quest" />
+            <Link to="/questinstruction"><img src="/img/quest.png" class="quest" alt="quest" /></Link>
             <h3>Quest</h3>
         </div>
         <div class="column">
-            <img src="sort.jpeg" class="sort" alt="sort" />
+            <Link to="/sortquestion"><img src="/img/sort.jpeg" class="sort" alt="sort" /></Link>
             <h3>Sort</h3>
         </div>
-      </div>
+      </article>
       <h2>Earn energy points!</h2>
     </body>
   )

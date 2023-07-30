@@ -13,6 +13,9 @@ import QuizCorrectAnswer from "./components/QuizCorrectAnswer.js";
 import QuizScore from "./components/QuizScore.js";
 import DIY from "./components/DIY.js";
 import SortScore from "./components/SortScore.js";
+import CompostBin from "./components/CompostBin.js";
+import QuestPrompt from "./components/QuestPrompt.js";
+import SortQuestion from "./components/SortQuestion.js";
 
 // working model
 function App(props) {
@@ -25,13 +28,16 @@ function App(props) {
         <Route path="/seedselect" element={<SeedSelect />} />
         <Route path="/home" element={<HomePage />} />
         <Route path="/garden" element={<GardenPage />} />
+        <Route path="/games" element={<GameSelection />} />
         <Route path="/quizinstruction" element={<QuizInstructions />} />
         <Route path="/quizquestion" element={<QuizQuestion />} />
         <Route path="/correctanswer" element={<QuizCorrectAnswer />} />
         <Route path="/quizscore" element={<QuizScore />} />
-        <Route path="/diy" element={<DIY />} />
+        <Route path="/questprompt" element={<QuestPrompt />} />
+        <Route path="/sortquestion" element={<SortQuestion />} />
         <Route path="/sortscore" element={<SortScore />} />
-        <Route path="/games" element={<GameSelection />} />
+        <Route path="/compostbin" element={<CompostBin />} />
+        <Route path="/diy" element={<DIY />} />
       </Routes>
     </div>
   );
