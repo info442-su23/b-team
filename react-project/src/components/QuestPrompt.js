@@ -14,10 +14,10 @@ export default function QuestPrompt() {
                 <h2><Checkbox />Quest 1: Pick up 5 pieces of trash outside</h2>
                 <h2><Checkbox />Quest 2: Start a compost bin</h2>
                 <h2><Checkbox />Quest 3: Organize your fridge
-                    by <br></br> moving the closest items toUTCString the front</h2>
+                    by <br></br> moving the closest items to the front</h2>
             </div>
             <div className="start-button-seed">
-                <button className="next-button-seed"><strong><Link to="/games">Submit</Link>
+                <button className="next-button-seed"><strong><Link to="/questscore">Submit</Link>
                 </strong>{" "}
                     <span className="arrow-right-instruction">&#10148;</span>{" "}
                 </button>

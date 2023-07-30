@@ -9,13 +9,15 @@ import GardenPage from "./components/GardenPage.js";
 import HomePage from "./components/HomePage.js";
 import { Routes, Route, Navigate } from 'react-router-dom'
 import QuizQuestion from "./components/QuizQuestion.js";
-import QuizCorrectAnswer from "./components/QuizCorrectAnswer.js";
+import QuizAnswer from "./components/QuizCorrectAnswer.js";
 import QuizScore from "./components/QuizScore.js";
 import DIY from "./components/DIY.js";
 import SortScore from "./components/SortScore.js";
 import CompostBin from "./components/CompostBin.js";
 import QuestPrompt from "./components/QuestPrompt.js";
 import SortQuestion from "./components/SortQuestion.js";
+import QuestInstructions from "./components/QuestInstructions.js";
+import QuestScore from "./components/QuestScore.js";
 
 // working model
 function App(props) {
@@ -33,7 +35,9 @@ function App(props) {
         <Route path="/quizquestion" element={<QuizQuestion />} />
         <Route path="/correctanswer" element={<QuizCorrectAnswer />} />
         <Route path="/quizscore" element={<QuizScore />} />
+        <Route path="/questinstruction" element={<QuestInstructions />} />
         <Route path="/questprompt" element={<QuestPrompt />} />
+        <Route path="/questscore" element={<QuestScore />} />
         <Route path="/sortquestion" element={<SortQuestion />} />
         <Route path="/sortscore" element={<SortScore />} />
         <Route path="/compostbin" element={<CompostBin />} />
