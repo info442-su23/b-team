@@ -519,6 +519,10 @@ img.garden {
     display: none;
   }
 
+  .hidden {
+    display: none;
+  }
+
 .margin {
   margin-top: 10%;
   margin-left: 20%;
