@@ -7,6 +7,9 @@ export default function DIY() {
     <body>
       <NavBar />
       <a href="#" className="back-arrow"><BackButton /></a>
+      <h1>Unlocked DIY Projects</h1>
+      {/* ?need a card with the image for diy compost bin  */}
+      <p>Click to open project</p>
     </body>
   )
 };
