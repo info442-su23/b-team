@@ -13,6 +13,7 @@ import QuizAnswer from "./components/QuizAnswer.js";
 import QuizScore from "./components/QuizScore.js";
 import DIY from "./components/DIY.js";
 import SortScore from "./components/SortScore.js";
+import QuestPrompt from "./components/QuestPrompt.js";
 
 // working model
 function App(props) {
@@ -29,6 +30,7 @@ function App(props) {
         <Route path="/quizquestion" element={<QuizQuestion />} />
         <Route path="/correctanswer" element={<QuizAnswer />} />
         <Route path="/quizscore" element={<QuizScore />} />
+        <Route path="/questinstruction" element={<QuestPrompt />} />
         <Route path="/diy" element={<DIY />} />
         <Route path="/sortscore" element={<SortScore />} />
         <Route path="/games" element={<GameSelection />} />
