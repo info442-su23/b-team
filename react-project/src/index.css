@@ -518,6 +518,10 @@ img.garden {
     text-align: left;
   }
 
+  #hidden{
+    display: none;
+  }
+
 /* from robert.css */
 /* body {
   margin: 0;
