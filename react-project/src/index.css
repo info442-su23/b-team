@@ -550,3 +550,26 @@ body.questprompt {
 .checkbox-container {
   margin-bottom: 30px;
 }
+
+img.sortingPic {
+  width: 80%;
+}
+
+.sortingQuestion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.next-button-instruction-sorting {
+  background-color: white;
+  color: #6CBC96;
+  font-size: 30px;
+  padding: 20px 30px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 30px;
+}

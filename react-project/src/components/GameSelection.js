@@ -16,7 +16,7 @@ export default function GameSelection() {
             <h3>Quest</h3>
         </div>
         <div class="column">
-            <Link to="/sortinstruction"><img src="/img/sort.jpeg" class="sort" alt="sort" /></Link>
+            <Link to="/sortquestion"><img src="/img/sort.jpeg" class="sort" alt="sort" /></Link>
             <h3>Sort</h3>
         </div>
       </article>

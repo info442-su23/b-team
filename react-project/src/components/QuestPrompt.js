@@ -17,7 +17,7 @@ export default function QuestPrompt() {
                     by <br></br> moving the closest items toUTCString the front</h2>
             </div>
             <div className="start-button-seed">
-                <button className="next-button-seed"><strong><Link to="/home">Submit</Link>
+                <button className="next-button-seed"><strong><Link to="/games">Submit</Link>
                 </strong>{" "}
                     <span className="arrow-right-instruction">&#10148;</span>{" "}
                 </button>
