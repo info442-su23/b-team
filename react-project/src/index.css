@@ -451,7 +451,6 @@ img.garden {
     flex-direction: row;
   }
 
-
   .text-container {
     max-width: 400px; /* Set the maximum width of the container */
     padding: 10px; /* Optional: Add padding for better appearance */
@@ -496,19 +495,13 @@ img.garden {
     margin-top: 5%;
   }
 
-  button.position {
-    background-color: white;
-    color: #6CBC96;
-    font-size: 30px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-  }
+.answer-block:active {
+  outline: black;
+}
 
-  .heading {
-    margin-top: 20%;
-  }
+.clicked {
+  outline: 2px solid #ff9800;
+}
 
   #compost-diy {
     display: flex;
@@ -522,125 +515,135 @@ img.garden {
     display: none;
   }
 
-/* from robert.css */
-/* body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: #6CBC96;
-  color: white;
+.margin {
+  margin-top: 10%;
+  margin-left: 20%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace, 'Karla', sans-serif;;
-}
-
-
-
-p {
-  text-align: center;
-  padding: 20px;
-  font-family: 'Karla';
-  font-size: 16px;
-  font-weight: bold;
-}
-
-img {
+.correct-answer {
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+}
+
+
+.text-container {
+  max-width: 400px;
+  /* Set the maximum width of the container */
+  padding: 10px;
+  /* Optional: Add padding for better appearance */
+}
+
+.text-container>p {
+  overflow-wrap: break-word;
+  /* This will force the words to wrap if they exceed the container width */
+}
+
+.energy-points {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  width: 25%;
-  height: 25%;
   background-color: white;
-  border-radius: 20px;
-}
-
-img#garden {
-  background-color: white;
+  color: black;
+  font-weight: bold;
+  border-radius: 10%;
   padding: 5%;
+  margin-bottom: 10%;
 }
 
-button {
-  padding: 0;
-  border: none;
-  background: none;
-  font-size: inherit;
-  font-family: inherit;
-  cursor: pointer;
-} */
+img.energy {
+  width: 200px;
+  height: 200px;
+}
 
-/* Button styles */
-/* .arrow-button {
+.button-padding {
+  margin-left: 65%;
+  margin-top: 20%;
+}
+
+article#quiz-score {
   display: flex;
-  padding: 10px 20px;
+  flex-direction: column;
+}
+
+.position {
+  top: 30px;
+  left: 30px;
+  color: white;
+  font-size: 700px;
+  text-decoration: none;
+}
+
+button.position {
   background-color: white;
   color: #6CBC96;
-  font-size: 16px;
-  border-radius: 5px;
-  position: relative;
-  overflow: hidden;
-  margin-top: 10%;
-  margin-right: 10%;
+  font-size: 30px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
-#arrow {
-  width: 10px;
-  height: 10px;
-  padding: 5%;
+.heading {
+  margin-top: 20%;
 }
 
-
-
-a {
+#game-selection {
   display: flex;
-  justify-content: right;
+  justify-content: center;
 }
 
-section.sun {
-  display: flex;
-  flex-direction: column;
-  background-color: white;
-  border-radius: 10%;
+.column {
+  width: 10%;
+  height: 10%;
+  margin: 5%;
 }
 
-section.sun > p {
-  color:black
+.selected {
+  outline: solid black;
 }
 
-section#select-new-seed {
-  display: flex;
+.unselected {
+  opacity: 85%;
 }
 
-div.container-new-seed {
-  display: flex;
-  align-items: center;
-}
-
-div.energypoints-container {
-  width: 300px;
-  border-radius: 25px;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
-
-progress {
-  width: 100%;
+.custom-checkbox {
+  width: 30px;
   height: 30px;
-  background-color: #f1f1f1;
+  margin-right: 9px;
+  vertical-align: middle;
 }
 
-progress::-webkit-progress-value {
+.custom-label {
+  display: inline-block;
+}
+
+body.questprompt {
+  text-align: left;
+}
+
+.checkbox-container {
+  margin-bottom: 30px;
+}
+
+img.sortingPic {
+  width: 80%;
+}
+
+.sortingQuestion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.next-button-instruction-sorting {
   background-color: white;
+  color: #6CBC96;
+  font-size: 30px;
+  padding: 20px 30px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 30px;
 }
-
-#navbar-sun {
-  background-color: transparent;
-} */
-/* end robert.css */
-
-/* brooke.css */
