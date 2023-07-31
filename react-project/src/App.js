@@ -18,6 +18,7 @@ import QuestPrompt from "./components/QuestPrompt.js";
 import SortQuestion from "./components/SortQuestion.js";
 import QuestInstructions from "./components/QuestInstructions.js";
 import QuestScore from "./components/QuestScore.js";
+import SortInstructions from "./components/SortInstructions.js"
 
 // working model
 function App(props) {
@@ -38,6 +39,7 @@ function App(props) {
         <Route path="/questinstruction" element={<QuestInstructions />} />
         <Route path="/questprompt" element={<QuestPrompt />} />
         <Route path="/questscore" element={<QuestScore />} />
+        <Route path="/sortinstructions" element={<SortInstructions />} />
         <Route path="/sortquestion" element={<SortQuestion />} />
         <Route path="/sortscore" element={<SortScore />} />
         <Route path="/compostbin" element={<CompostBin />} />
