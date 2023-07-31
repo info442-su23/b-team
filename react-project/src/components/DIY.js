@@ -9,8 +9,11 @@ export default function DIY() {
       <NavBar />
       <a href="#" className="back-arrow"><BackButton /></a>
       <h1>Unlocked DIY Projects</h1>
-      {/* ?need a card with the image for diy compost bin  */}
-      <p>Click to open project</p>
+      <section className="energy-points">
+            <p>DIY: Compost Bin</p>
+            <Link to="/CompostBin"><img src="/img/compost.png" alt="compost" /></Link>
+            <h3>Click to open project</h3>
+          </section>
     </body>
   )
 };
