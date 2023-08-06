@@ -8,6 +8,7 @@ import { initializeApp } from 'firebase/app';
 const firebaseConfig = {
   apiKey: "AIzaSyDsL20adfD3HXchxpj__6qT4pWuC0yVlI4",
   authDomain: "info442-biobuddies.firebaseapp.com",
+  databaseURL: "https://info442-biobuddies-default-rtdb.firebaseio.com",
   projectId: "info442-biobuddies",
   storageBucket: "info442-biobuddies.appspot.com",
   messagingSenderId: "151659787237",

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import NavBar from './Nav';
 import BackButton from './GoBackButton';
 import AnswerButton from './AnswerButton';
+import { getDatabase, ref, get } from "firebase/database";
 
 const questions = [
   {
