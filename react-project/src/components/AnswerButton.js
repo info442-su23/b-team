@@ -13,6 +13,7 @@ export default function AnswerButton({
   const [selectedButtonId, setSelectedButtonId] = useState(null);
   const [showSubmitButton, setShowSubmitButton] = useState(false);
   const [showNextButton, setShowNextButton] = useState(false);
+  const [totalPoints, setTotalPoints] = useState(0);
 
   const buttons = currentQuestion.answers
 
@@ -22,10 +23,35 @@ export default function AnswerButton({
     setShowSubmitButton(true);
   };
 
+  function setCookie(name, value, days) {
+    const expires = new Date();
+    expires.setTime(expires.getTime() + days * 24 * 60 * 60 * 1000);
+    document.cookie = `${name}=${value};expires=${expires.toUTCString()};path=/`;
+  }
+
+  function getCookie(name) {
+    const value = document.cookie.match(`(^|;)\\s*${name}\\s*=\\s*([^;]+)`);
+    return value ? value.pop() : '';
+  }
+
+  function updateExperienceDisplay(totalPoints) {
+    document.getElementsByClassName('points').innerText = totalPoints;
+  }
+
+  function earnExperience(points) {
+    const currentPoints = parseInt(getCookie('experience'), 10) || 0;
+    const totalPoints = Math.min(currentPoints + points, 100); // Cap at 100 points
+    setCookie('experience', totalPoints, 30); // Store the points in a cookie for 30 days
+    updateExperienceDisplay(totalPoints);
+  }
+
   const submitClick = () => {
     const selectedAnswer = currentQuestion.answers.find((answer) => answer.id === selectedButtonId);
     const isCorrect = selectedAnswer?.correct ?? false;
 
+    // calculate points earned
+    let pointsEarned = isCorrect ? 20 : 10;
+    setTotalPoints(totalPoints + pointsEarned);
 
     setShowCorrectAnswer(true);
     setShowSubmitButton(false);
@@ -67,11 +93,10 @@ export default function AnswerButton({
         </section>
         )}
       {currentQuestionIndex === 1 && endQuiz && (
-        <Link to="/quizscore">
-          <button className="next-button-instruction heading">Score</button>
+        <Link to="/quizscore" state={ totalPoints }>
+          <button className="next-button-instruction heading" onClick={ earnExperience(totalPoints) }>Score</button>
         </Link>
       )}
     </article>
   );
 }
-
