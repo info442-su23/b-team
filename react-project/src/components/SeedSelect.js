@@ -30,24 +30,24 @@ export default function SeedSelect() {
       <h1 className="seed-levels">easy</h1>
       <div className="container-easy">
         <div className="box-opaque" onClick={ showStartButton }>
-          <img src="img/seed.jpeg" className={showOutline ? "seed-select selected" : "seed-select"} />
-        </div>
-        <div className="box"><img src="img/seed.jpeg" className="seed-select" /></div>
-        <div className="box"><img src="img/seed.jpeg" className="seed-select" /></div>
+        <h2 className='seed-label'>Tomato</h2><img src="img/seed.jpeg" className={showOutline ? "seed-select selected" : "seed-select"} />
+          </div>
+        <div className="box"><h2 className='seed-label'>Pepper</h2><img src="img/seed.jpeg" className="seed-select" /></div>
+        <div className="box"><h2 className='seed-label'>Raspberry</h2><img src="img/seed.jpeg" className="seed-select" /></div>
       </div>
       <hr className="seed" />
       <h1 className="seed-levels">medium</h1>
       <div className="container-med">
-        <div className="box"><img src="img/seed.jpeg" className="seed-select" /></div>
-        <div className="box"><img src="img/seed.jpeg" className="seed-select" /></div>
-        <div className="box"><img src="img/seed.jpeg" className="seed-select" /></div>
+        <div className="box"><h2 className='seed-label'>Carrots</h2><img src="img/seed.jpeg" className="seed-select" /></div>
+        <div className="box"><h2 className='seed-label'>Zucchini</h2><img src="img/seed.jpeg" className="seed-select" /></div>
+        <div className="box"><h2 className='seed-label'>Peas</h2><img src="img/seed.jpeg" className="seed-select" /></div>
       </div>
       <hr className="seed" />
       <h1 className="seed-levels">hard</h1>
       <div className="container-hard">
-        <div className="box"><img src="img/seed.jpeg" className="seed-select" /></div>
-        <div className="box"><img src="img/seed.jpeg" className="seed-select" /></div>
-        <div className="box"><img src="img/seed.jpeg" className="seed-select" /></div>
+        <div className="box"><h2 className='seed-label'>Melon</h2><img src="img/seed.jpeg" className="seed-select" /></div>
+        <div className="box"><h2 className='seed-label'>Potato</h2><img src="img/seed.jpeg" className="seed-select" /></div>
+        <div className="box"><h2 className='seed-label'>Pumpkin</h2><img src="img/seed.jpeg" className="seed-select" /></div>
       </div>
       <div className="start-button-seed">
         {showSubmitButton && (

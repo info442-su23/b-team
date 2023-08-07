@@ -89,6 +89,12 @@ div.container {
 }
 
 /* seed select */
+
+h2.seed-label {
+  color: black;
+  text-align: center;
+}
+
 body.seed-select-page {
   margin: 0;
   padding: 0;
@@ -136,6 +142,7 @@ div.box {
   height: 100%;
   text-align: center;
   opacity: 50%;
+
 }
 
 div.box-opaque {
