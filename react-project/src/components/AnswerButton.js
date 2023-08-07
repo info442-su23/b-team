@@ -7,13 +7,14 @@ export default function AnswerButton({
   setShowCorrectAnswer,
   setIsAnswerCorrect,
   handleNextQuestion,
-  currentQuestionIndex,
-  endQuiz
+  currentQuestionIndex
 }) {
   const [selectedButtonId, setSelectedButtonId] = useState(null);
   const [showSubmitButton, setShowSubmitButton] = useState(false);
   const [showNextButton, setShowNextButton] = useState(false);
   const [totalPoints, setTotalPoints] = useState(0);
+  const [endQuiz, setEndQuiz] = useState(false);
+
 
   const buttons = currentQuestion.answers
 
@@ -46,6 +47,9 @@ export default function AnswerButton({
   }
 
   const submitClick = () => {
+    if (currentQuestionIndex === 4) {
+      setEndQuiz(true)
+    }
     const selectedAnswer = currentQuestion.answers.find((answer) => answer.id === selectedButtonId);
     const isCorrect = selectedAnswer?.correct ?? false;
 
@@ -62,7 +66,11 @@ export default function AnswerButton({
 
   const nextClick = () => {
     setShowNextButton(false);
-    handleNextQuestion();
+    if (currentQuestionIndex < 4) {
+      handleNextQuestion();
+    } else {
+      setEndQuiz(true)
+    }
   }
 
   return (
@@ -87,12 +95,12 @@ export default function AnswerButton({
         onClick={ submitClick }
         >Submit</button>
       )}
-      {showNextButton && (
+      {showNextButton && currentQuestionIndex < 4 && (
         <section>
           <button className="next-button-instruction heading" onClick={ nextClick }>Next Question</button>
         </section>
         )}
-      {currentQuestionIndex === 1 && endQuiz && (
+      {currentQuestionIndex === 4 && endQuiz && (
         <Link to="/quizscore" state={ totalPoints }>
           <button className="next-button-instruction heading" onClick={ earnExperience(totalPoints) }>Score</button>
         </Link>
