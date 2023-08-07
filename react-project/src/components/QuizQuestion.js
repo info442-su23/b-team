@@ -1,86 +1,156 @@
 import React, { useState, useEffect } from 'react';
 import NavBar from './Nav';
 import BackButton from './GoBackButton';
-import AnswerButton from './AnswerButton';
 import { getDatabase, ref, get } from "firebase/database";
-
-const questions = [
-  {
-    question: 'What percentage of trash is food?',
-    note: 'In fact, food is the single largest component taking up space inside US landfills, making up 22 percent of municipal solid waste.',
-    answers: [
-    { id: 1, label: '7%', correct: false },
-    { id: 2, label: '22%', correct: true },
-    { id: 3, label: '62%', correct: false },
-    { id: 4, label: '46%', correct: false }
-    ],
-    correctAnswer: 1,
-  },
-  {
-    question: 'Test Question 2',
-    note: 'Fun fact',
-    answers: [
-    { id: 1, label: '1', correct: true },
-    { id: 2, label: '2', correct: false },
-    { id: 3, label: '3', correct: false },
-    { id: 4, label: '4', correct: false }
-    ],
-    correctAnswer: 0,
-  }
-  // add other questions go here
-]
-
+import { Link } from "react-router-dom";
 
 export default function QuizQuestion() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [showCorrectAnswer, setShowCorrectAnswer] = useState(false);
-  const [isAnswerCorrect, setIsAnswerCorrect] = useState(false);
-  const [endQuiz, setEndQuiz] = useState(false);
+  const [quizData, setQuizData] = useState([]);
+  const [score, setScore] = useState(0);
+  const [userResponses, setUserResponses] = useState({});
 
   useEffect(() => {
-    console.log('Current question index:', currentQuestionIndex);
-  }, [currentQuestionIndex]);
+    // Fetch quiz data from Firebase Realtime Database
+    const fetchQuizData = async () => {
+      try {
+        const db = getDatabase();
+        const quizRef = ref(db, '/');
+        const snapshot = await get(quizRef);
 
-  // Cycles through each question until reaching the end of the list
-  const handleNextQuestion = () => {
-    if (currentQuestionIndex < questions.length - 1) {
+        if (snapshot.exists()) {
+          const data = snapshot.val();
+          const quizData = Object.values(data);
+          setQuizData(quizData);
+        }
+      } catch (error) {
+        console.error('Error fetching quiz data:', error);
+      }
+    };
+
+    fetchQuizData();
+  }, []);
+
+  const handleResponseChange = (selectedOption) => {
+    const currentQuestion = quizData[currentQuestionIndex];
+    setUserResponses((prevResponses) => ({
+      ...prevResponses,
+      [currentQuestion.Question]: selectedOption,
+    }));
+  };
+
+  const handleSubmitQuestion = () => {
+    setShowCorrectAnswer(true);
+    if (currentQuestionIndex < 4) {
       setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
       setShowCorrectAnswer(false);
-      setIsAnswerCorrect(false);
-      console.log(currentQuestionIndex)
     } else {
-      console.log('im here')
-      setEndQuiz(true);
+      handleSubmitQuiz();
     }
   };
 
-  const currentQuestion = questions[currentQuestionIndex];
+  const handleSubmitQuiz = () => {
+    // Calculate the score based on user responses and correct answers
+    let userScore = 0;
+    quizData.forEach((question) => {
+      if (userResponses[question.Question] === question['Correct Answer']) {
+        userScore++;
+      }
+    });
+    setScore(userScore);
+    setCurrentQuestionIndex(-1);
+  };
+
+  if (quizData.length === 0) {
+    // Show loading
+    return (
+      <div>
+        <p>Loading...</p>
+      </div>
+    );
+  }
+
+  if (currentQuestionIndex === -1) {
+    // Show final score after completing all questions
+    return (
+      <div>
+        <article id="quiz-score">
+          <section className="heading">
+            <h1>Sort</h1>
+            <p>Quiz Completed! Your Score: {score} out of 5</p>
+          </section>
+          <section className="energy-points">
+            <img className="energy" src="/img/sun.png" alt="sun" />
+            <p>+ 10 Energy Points</p>
+          </section>
+        </article>
+        <section>
+          <button className='position'><strong><Link to="/games">Back to Games </Link></strong><span className="arrow-right-instruction">&#10148;</span> </button>
+        </section>
+      </div>
+    );
+  }
+
+  const currentQuestion = quizData[currentQuestionIndex];
 
   return (
     <body>
       <NavBar />
       <a href="#" className="back-arrow"><BackButton /></a>
       <article className="correct-answer">
-        <section className={ showCorrectAnswer ? ' ' : 'hidden'}>
-            <h1>{isAnswerCorrect ? 'Correct!' : 'Incorrect'}</h1>
-            <div className='text-container'>
-              <p>{ currentQuestion.note }</p>
-            </div>
+        <section className={showCorrectAnswer ? ' ' : 'hidden'}>
+          <h1>{userResponses[currentQuestion.Question] === currentQuestion['Correct Answer'] ? 'Correct!' : 'Incorrect'}</h1>
+          <div className='text-container'>
+            <p>{currentQuestion.Fact}</p>
+          </div>
         </section>
         <section>
-          <h1>Question { currentQuestionIndex + 1 }/5</h1>
-          <h2>{ currentQuestion.question }</h2>
-          <AnswerButton
-            currentQuestion={ currentQuestion }
-            showCorrectAnswer={ showCorrectAnswer }
-            setShowCorrectAnswer={ setShowCorrectAnswer }
-            setIsAnswerCorrect={ setIsAnswerCorrect }
-            handleNextQuestion={ handleNextQuestion }
-            currentQuestionIndex={ currentQuestionIndex }
-            endQuiz={ endQuiz }
-          />
+          <h1>Question {currentQuestionIndex + 1}/5</h1>
+          <h2>{currentQuestion.Question}</h2>
+          <div>
+            <input
+              type="radio"
+              name={`question_${currentQuestionIndex}`}
+              value={currentQuestion['Correct Answer']}
+              checked={userResponses[currentQuestion.Question] === currentQuestion['Correct Answer']}
+              onChange={() => handleResponseChange(currentQuestion['Correct Answer'])}
+            />
+            <label>{currentQuestion['Correct Answer']}</label>
+          </div>
+          <div>
+            <input
+              type="radio"
+              name={`question_${currentQuestionIndex}`}
+              value={currentQuestion['Incorrect 1']}
+              checked={userResponses[currentQuestion.Question] === currentQuestion['Incorrect 1']}
+              onChange={() => handleResponseChange(currentQuestion['Incorrect 1'])}
+            />
+            <label>{currentQuestion['Incorrect 1']}</label>
+          </div>
+          <div>
+            <input
+              type="radio"
+              name={`question_${currentQuestionIndex}`}
+              value={currentQuestion['Incorrect 2']}
+              checked={userResponses[currentQuestion.Question] === currentQuestion['Incorrect 2']}
+              onChange={() => handleResponseChange(currentQuestion['Incorrect 2'])}
+            />
+            <label>{currentQuestion['Incorrect 2']}</label>
+          </div>
+          <div>
+            <input
+              type="radio"
+              name={`question_${currentQuestionIndex}`}
+              value={currentQuestion['Incorrect 3']}
+              checked={userResponses[currentQuestion.Question] === currentQuestion['Incorrect 3']}
+              onChange={() => handleResponseChange(currentQuestion['Incorrect 3'])}
+            />
+            <label>{currentQuestion['Incorrect 3']}</label>
+          </div>
+          <button onClick={handleSubmitQuestion}>Submit Question</button>
         </section>
       </article>
     </body>
-  )
-};
+  );
+}
