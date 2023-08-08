@@ -90,6 +90,13 @@ div.container {
 
 /* seed select */
 
+h1.seed-select {
+  padding-top: 3rem;
+  margin-left: 35%;
+  margin-right: 35%;
+}
+
+
 h2.seed-label {
   color: black;
   text-align: center;
@@ -174,7 +181,7 @@ h1.seed-levels {
 hr.seed {
   border: none;
   border-top: 2px solid white;
-  margin-top: 50px;
+  /* margin-top: 50px; */
 }
 
 div.start-button-seed {
@@ -182,6 +189,7 @@ div.start-button-seed {
   padding: 0;
   height: 10vh;
   position: relative;
+  padding-bottom: 2.5rem;
 }
 
 button.next-button-seed {
@@ -381,6 +389,7 @@ img.garden {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  padding-top: 30%;
 }
 
 @media (max-width: 1000px) {
@@ -436,6 +445,11 @@ img.garden {
     margin-right: 0;
     padding: 0;
   }
+}
+
+h1.quizpage {
+  margin-right: 5rem%;
+  margin-left: 5rem
 }
 
   .quiz-answers-container {

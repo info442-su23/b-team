@@ -28,9 +28,11 @@ export default function SeedSelect() {
 
   return (
     <body className="seed-select-page" >
-      <div className="back-container">
+      <h1 className='seed-select'>Select the type of plant you want to grow. Then click start!</h1>
+      <h2 className='seed-select'>Finish plants to unlock higher levels.</h2>
+      {/* <div className="back-container"> */}
         <a href="#" className="back-arrow"><BackButton /></a>
-      </div>
+      {/* </div> */}
       <hr className="seed" />
       <h1 className="seed-levels">easy</h1>
       <div className="container-easy">
