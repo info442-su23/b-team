@@ -12,6 +12,11 @@ export default function SeedSelect() {
     document.cookie = `${name}=${value};expires=${expires.toUTCString()};path=/`;
   }
 
+  function getCookie(name) {
+    const value = document.cookie.match(`(^|;)\\s*${name}\\s*=\\s*([^;]+)`);
+    return value ? value.pop() : '';
+  }
+
   const submitClick = () => {
     setCookie('experience', 0, 365)
   }
@@ -32,7 +37,9 @@ export default function SeedSelect() {
         <div className="box-opaque" onClick={ showStartButton }>
         <h2 className='seed-label'>Tomato</h2><img src="img/seed.jpeg" className={showOutline ? "seed-select selected" : "seed-select"} />
           </div>
-        <div className="box"><h2 className='seed-label'>Pepper</h2><img src="img/seed.jpeg" className="seed-select" /></div>
+        <div className={getCookie('experience') == 100 ? "box-opaque" : "box"}>
+          <h2 className='seed-label'>Pepper</h2><img src="img/seed.jpeg" className="seed-select" />
+        </div>
         <div className="box"><h2 className='seed-label'>Raspberry</h2><img src="img/seed.jpeg" className="seed-select" /></div>
       </div>
       <hr className="seed" />

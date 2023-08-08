@@ -1,5 +1,6 @@
 import React from 'react';
 import NavBar from './Nav';
+import { Link } from 'react-router-dom';
 
 export default function HomePage() {
 
@@ -26,13 +27,21 @@ export default function HomePage() {
     <body>
       <NavBar />
         <img src={ plant } className="seed" alt="seed" />
-        <div className="percent"><p>Your tomato plant is {getCookie('experience')}% grown. Start playing games to earn more energy points and grow your plant!</p></div>
+        <div className="percent"><p>Your tomato plant is {getCookie('experience')}% grown. {getCookie('experience') == 100 ? 'Start growing your next plant by selecting a new seed!' : 'Start playing games to earn more energy points and grow your plant!'}</p></div>
         <div className="container">
             <div className="energypoints"></div>
             <div><img src="/img/sun.webp" className="sun" alt="sun" /></div>
         </div>
         <div>
           <p className="points">{getCookie('experience')}/100</p>
+        </div>
+        <div>
+            <Link to="/seedselect">
+                <button
+                    className="next-button-seed heading"><strong>Seeds </strong>
+                    <span className="arrow-right-instruction">&#10148;</span>{" "}
+                </button>
+            </Link>
         </div>
     </body>
   );
