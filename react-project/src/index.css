@@ -89,43 +89,49 @@ div.container {
 }
 
 /* seed select */
+
+h2.seed-label {
+  color: black;
+  text-align: center;
+}
+
 body.seed-select-page {
   margin: 0;
   padding: 0;
   background-color: #6CBC96;
 }
 
-.container-easy {
+div.container-easy {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 50px;
   height: 250px;
-  max-width: 600px;
+  max-width: 1000px;
   margin: 20px 375px;
   margin-bottom: 100px;
 }
 
-.container-med {
+div.container-med {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 50px;
   height: 250px;
-  max-width: 600px;
+  max-width: 1000px;
   margin: 20px 375px;
   margin-bottom: 100px;
 }
 
-.container-hard {
+div.container-hard {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 50px;
   height: 250px;
-  max-width: 600px;
+  max-width: 1000px;
   margin: 20px 375px;
   margin-bottom: 100px;
 }
 
-.box {
+div.box {
   background-color: white;
   padding: 20px;
   width: 250px;
@@ -135,9 +141,24 @@ body.seed-select-page {
   align-items: center;
   height: 100%;
   text-align: center;
+  opacity: 50%;
+
 }
 
-.seed-select {
+div.box-opaque {
+  background-color: white;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+  cursor: pointer;
+}
+
+img.seed-select {
   border-radius: 50%;
   margin-top: 0;
   padding: 3px;
@@ -145,25 +166,25 @@ body.seed-select-page {
   height: 200px;
 }
 
-.seed-levels {
+h1.seed-levels {
   color: white;
   text-align: center;
 }
 
-hr {
+hr.seed {
   border: none;
   border-top: 2px solid white;
   margin-top: 50px;
 }
 
-.start-button {
+div.start-button-seed {
   margin: 0;
   padding: 0;
   height: 10vh;
   position: relative;
 }
 
-.next-button {
+button.next-button-seed {
   padding: 20px 60px;
   background-color: white;
   color: #6CBC96;
@@ -171,7 +192,6 @@ hr {
   border-radius: 5px;
   cursor: pointer;
   font-size: 25px;
-  position: absolute;
   bottom: 30px;
   right: 30px;
 }
@@ -187,11 +207,180 @@ hr {
 
 .back-arrow {
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: 30px;
+  left: 30px;
   color: white;
   font-size: 70px;
   text-decoration: none;
+}
+
+button.back-arrow {
+  background-color: white;
+  color: #6CBC96;
+  font-size: 30px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Landing Page */
+body {
+  background-color: #6CBC96;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  /* Arrange elements vertically */
+  justify-content: center;
+  /* Center items horizontally */
+  align-items: center;
+}
+
+img.landing-page {
+  max-width: 100%;
+  /* Limit image size to fit the container */
+  max-height: 100vh;
+  /* Limit image height to fit the viewport */
+}
+
+header.landing-page {
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  /* Take full width */
+}
+
+h1.landing-page {
+  font-size: 60px;
+  margin: 10px;
+}
+
+h2.landing-page {
+  padding-left: 15rem;
+  padding-right: 15rem;
+}
+
+.start-button-landing {
+  background-color: white;
+  color: #6CBC96;
+  font-size: 30px;
+  padding: 20px 40px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.arrow-right {
+  margin-left: 10px;
+  color: #6CBC96;
+}
+
+.containerlanding-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Instructions page */
+
+ul.instruction {
+  margin-top: 1rem;
+  text-align: left;
+  padding-left: 26rem;
+  padding-right: 13rem;
+}
+
+li.instruction {
+  list-style: none;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.skip-button-instruction {
+  background-color: #6CBC96;
+  color: white;
+  text-decoration: underline;
+  border: 5px solid white;
+  font-size: 30px;
+  padding: 15px 35px;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+.next-button-instruction {
+  background-color: white;
+  color: #6CBC96;
+  font-size: 30px;
+  padding: 20px 30px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.button-container-instruction {
+  display: flex;
+  justify-content: right;
+  margin-top: 3rem;
+  padding-right: 0rem;
+}
+
+.container-instruction h1 {
+  margin-top: 5rem;
+  font-size: 60px;
+}
+
+/* Navigation Demo Page */
+.navigation-bar-demo h1 {
+  font-size: 30px;
+  margin: 10px;
+}
+
+.container-demo {
+  padding-top: 80px;
+}
+
+.card-containers-demo {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: white;
+  color: black;
+  margin: 10px;
+  min-width: 50px;
+  max-width: 200px;
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  flex-basis: auto;
+}
+
+.card p {
+  font-size: 20px;
+}
+
+/* Garden page */
+.garden-plot-empty {
+  width: 50vh;
+  max-width: 100%;
+  margin-top: 3rem;
+  height: auto;
+  display: block;
+}
+
+img.garden {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 @media (max-width: 1000px) {
@@ -247,4 +436,243 @@ hr {
     margin-right: 0;
     padding: 0;
   }
+}
+
+  .quiz-answers-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .answer-block {
+    background-color: white;
+    color: black;
+    font-size: 30px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .answer-block:active {
+    outline: black;
+  }
+
+  .clicked {
+    outline: 2px solid #ff9800;
+  }
+
+  .margin {
+    margin-top: 10%;
+    margin-left: 20%;
+  }
+
+  .correct-answer {
+    display: flex;
+  }
+
+  .correct-answer > section {
+    margin-right: 10%;
+    margin-top: 15%;
+  }
+
+  .text-container {
+    max-width: 400px; /* Set the maximum width of the container */
+    padding: 10px; /* Optional: Add padding for better appearance */
+  }
+
+  .text-container > p {
+    overflow-wrap: break-word; /* This will force the words to wrap if they exceed the container width */
+  }
+
+  .energy-points {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    border-radius: 10%;
+    padding: 5%;
+  }
+
+  img.energy {
+    width: 200px;
+    height: 200px;
+  }
+
+  .button-padding {
+    margin-left: 65%;
+    margin-top: 20%;
+  }
+
+  article#quiz-score {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .position {
+    top: 30px;
+    left: 30px;
+    color: white;
+    font-size: 700px;
+    text-decoration: none;
+    margin-top: 5%;
+  }
+
+.answer-block:active {
+  outline: black;
+}
+
+.clicked {
+  outline: 2px solid #ff9800;
+}
+
+  #compost-diy {
+    display: flex;
+  }
+
+  .compost-list{
+    text-align: left;
+  }
+
+  #hidden{
+    display: none;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+.margin {
+  margin-top: 10%;
+  margin-left: 20%;
+}
+
+.correct-answer {
+  display: flex;
+  flex-direction: row;
+}
+
+
+.text-container {
+  max-width: 400px;
+  /* Set the maximum width of the container */
+  padding: 10px;
+  /* Optional: Add padding for better appearance */
+}
+
+.text-container>p {
+  overflow-wrap: break-word;
+  /* This will force the words to wrap if they exceed the container width */
+}
+
+.energy-points {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  border-radius: 10%;
+  padding: 5%;
+  margin-bottom: 10%;
+}
+
+img.energy {
+  width: 200px;
+  height: 200px;
+}
+
+.button-padding {
+  margin-left: 65%;
+  margin-top: 20%;
+}
+
+article#quiz-score {
+  display: flex;
+  flex-direction: column;
+}
+
+.position {
+  top: 30px;
+  left: 30px;
+  color: white;
+  font-size: 700px;
+  text-decoration: none;
+}
+
+button.position {
+  background-color: white;
+  color: #6CBC96;
+  font-size: 30px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.heading {
+  margin-top: 20%;
+}
+
+#game-selection {
+  display: flex;
+  justify-content: center;
+}
+
+.column {
+  width: 10%;
+  height: 10%;
+  margin: 5%;
+}
+
+.selected {
+  outline: solid black;
+}
+
+.unselected {
+  opacity: 75%;
+}
+
+.custom-checkbox {
+  width: 30px;
+  height: 30px;
+  margin-right: 9px;
+  vertical-align: middle;
+}
+
+.custom-label {
+  display: inline-block;
+}
+
+body.questprompt {
+  text-align: left;
+}
+
+.checkbox-container {
+  margin-bottom: 30px;
+}
+
+img.sortingPic {
+  width: 80%;
+}
+
+.sortingQuestion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.next-button-instruction-sorting {
+  background-color: white;
+  color: #6CBC96;
+  font-size: 30px;
+  padding: 20px 30px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 30px;
 }
