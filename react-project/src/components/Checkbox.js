@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 
-const Checkbox = () => {
+const Checkbox = ({ onChange, points }) => {
     const [isChecked, setIsChecked] = useState(false);
 
     const handleChange = () => {
-        setIsChecked(!isChecked);
+        const newChecked = !isChecked;
+        setIsChecked(newChecked);
+        onChange(newChecked); // Notify the parent component
     };
 
     return (
