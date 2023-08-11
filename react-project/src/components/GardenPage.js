@@ -3,14 +3,11 @@ import NavBar from './Nav';
 import BackButton from './GoBackButton';
 import { Link } from 'react-router-dom';
 
-
-
 export default function GardenPage() {
     return (
         <body>
             <NavBar />
             <a href="#" className="back-arrow"><BackButton /></a>
-
             <div className="container-demo">
                 <header className="navigation-bar-demo">
                     <h1>Garden</h1>
