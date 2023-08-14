@@ -381,15 +381,12 @@ li.instruction {
   max-width: 100%;
   margin-top: 3rem;
   height: auto;
-  display: block;
 }
 
 img.garden {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding-top: 30%;
+  width: 75%;
+  display: block;
+  margin: 0 auto; /* This centers the image horizontally */
 }
 
 @media (max-width: 1000px) {

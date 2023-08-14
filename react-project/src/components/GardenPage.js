@@ -8,16 +8,18 @@ export default function GardenPage() {
         <body>
             <NavBar />
             <a href="#" className="back-arrow"><BackButton /></a>
-            <div className="container-demo">
-                <header className="navigation-bar-demo">
-                    <h1>Garden</h1>
-                    <h2>Your Garden is empty :-( </h2>
-                    <h2>Grow full plants to add to your garden!</h2>
-                </header>
-            </div>
-            <div>
-                <img src="img/empty-garden.png" className="garden" alt="Empty garden image" />
-            </div>
+            <article className='garden-page'>
+                <div className="container-demo">
+                    <header className="navigation-bar-demo">
+                        <h1>Garden</h1>
+                        <h2>Your Garden is empty :-( </h2>
+                        <h2>Grow full plants to add to your garden!</h2>
+                    </header>
+                </div>
+                <div>
+                    <img src="img/empty-garden.png" className="garden" alt="Empty garden image" />
+                </div>
+            </article>
         </body>
     )
 }
