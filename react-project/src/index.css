@@ -178,10 +178,24 @@ h1.seed-levels {
   text-align: center;
 }
 
+.seed {
+  width: 450px;
+  height: auto;
+}
+
 hr.seed {
   border: none;
   border-top: 2px solid white;
   /* margin-top: 50px; */
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 80%;
+  font-size: 30px;
 }
 
 div.start-button-seed {
@@ -222,6 +236,10 @@ button.next-button-seed {
   text-decoration: none;
 }
 
+.back-arrow:hover {
+  transform: scale(1.05);
+}
+
 button.back-arrow {
   background-color: white;
   color: #6CBC96;
@@ -242,17 +260,14 @@ body {
   padding: 0;
   display: flex;
   flex-direction: column;
-  /* Arrange elements vertically */
   justify-content: center;
-  /* Center items horizontally */
   align-items: center;
+  padding-top: 20px;
 }
 
 img.landing-page {
   max-width: 100%;
-  /* Limit image size to fit the container */
   max-height: 100vh;
-  /* Limit image height to fit the viewport */
 }
 
 header.landing-page {
@@ -268,18 +283,52 @@ h1.landing-page {
 }
 
 h2.landing-page {
-  padding-left: 15rem;
-  padding-right: 15rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
 }
 
 .start-button-landing {
   background-color: white;
-  color: #6CBC96;
+  display: inline-block;
+  padding: 10px 20px;
   font-size: 30px;
-  padding: 20px 40px;
+  color: #6CBC96;
   border: none;
   border-radius: 10px;
   cursor: pointer;
+  text-decoration: none;
+}
+
+.start-button-landing:hover {
+  transform: scale(1.05);
+}
+.next-button-seed:hover {
+  transform: scale(1.05);
+}
+
+.skip-button-instruction,
+.next-button-instruction {
+  background-color: white;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 30px;
+  color: #6CBC96;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.2s;
+  margin-right: 10px;
+}
+
+.skip-button-instruction:hover,
+.next-button-instruction:hover {
+  transform: scale(1.05);
+}
+
+/* Styles for the arrow */
+.arrow-right-instruction {
+  margin-left: 8px;
 }
 
 .arrow-right {
@@ -287,7 +336,7 @@ h2.landing-page {
   color: #6CBC96;
 }
 
-.containerlanding-page {
+.container-landing-page {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -298,8 +347,8 @@ h2.landing-page {
 ul.instruction {
   margin-top: 1rem;
   text-align: left;
-  padding-left: 26rem;
-  padding-right: 13rem;
+  padding-left: 16rem;
+  padding-right: 16rem;
 }
 
 li.instruction {
@@ -311,7 +360,7 @@ li.instruction {
 .skip-button-instruction {
   background-color: #6CBC96;
   color: white;
-  text-decoration: underline;
+  text-decoration: none;
   border: 5px solid white;
   font-size: 30px;
   padding: 15px 35px;
@@ -327,13 +376,16 @@ li.instruction {
   border: none;
   border-radius: 10px;
   cursor: pointer;
+  text-decoration: none;
 }
+
 
 .button-container-instruction {
   display: flex;
   justify-content: right;
   margin-top: 3rem;
   padding-right: 0rem;
+  text-decoration: none;
 }
 
 .container-instruction h1 {
@@ -389,7 +441,7 @@ img.garden {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding-top: 30%;
+  margin-top: 13rem;
 }
 
 @media (max-width: 1000px) {
@@ -448,8 +500,14 @@ img.garden {
 }
 
 h1.quizpage {
-  margin-right: 5rem%;
+  margin-right: 5rem;
   margin-left: 5rem
+}
+
+h2.quizpage {
+  margin-left: 25rem;
+  margin-right: 25rem;
+  padding-bottom: 1rem;
 }
 
   .quiz-answers-container {
@@ -491,12 +549,12 @@ h1.quizpage {
   }
 
   .text-container {
-    max-width: 400px; /* Set the maximum width of the container */
-    padding: 10px; /* Optional: Add padding for better appearance */
+    max-width: 400px;
+    padding: 10px; 
   }
 
   .text-container > p {
-    overflow-wrap: break-word; /* This will force the words to wrap if they exceed the container width */
+    overflow-wrap: break-word;
   }
 
   .energy-points {
@@ -571,14 +629,11 @@ h1.quizpage {
 
 .text-container {
   max-width: 400px;
-  /* Set the maximum width of the container */
   padding: 10px;
-  /* Optional: Add padding for better appearance */
 }
 
 .text-container>p {
   overflow-wrap: break-word;
-  /* This will force the words to wrap if they exceed the container width */
 }
 
 .energy-points {
@@ -635,11 +690,26 @@ button.position {
   justify-content: center;
 }
 
-.column {
-  width: 10%;
-  height: 10%;
-  margin: 5%;
+.game-image {
+  width: 200px; 
+  height: 200px;
+  border-radius: 10%;
+  transition: transform 0.2s ease-in-out;
 }
+
+.game-image:hover {
+  transform: scale(1.1);
+}
+
+.game-image:hover {
+  transform: none;
+}
+
+.column {
+  width: 30%;
+  margin: 3%;
+}
+
 
 .selected {
   outline: solid black;
@@ -669,7 +739,7 @@ body.questprompt {
 }
 
 img.sortingPic {
-  width: 80%;
+  width: 60%;
 }
 
 .sortingQuestion {
@@ -678,6 +748,11 @@ img.sortingPic {
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+
+.next-button-instruction-sorting strong a {
+  text-decoration: none;
+  color: #549476;
 }
 
 .next-button-instruction-sorting {
@@ -689,4 +764,9 @@ img.sortingPic {
   border-radius: 10px;
   cursor: pointer;
   margin-top: 30px;
+}
+
+
+.next-button-instruction-sorting:hover {
+  transform: scale(1.05);
 }

@@ -18,7 +18,7 @@ export default function SeedSelect() {
   }
 
   const submitClick = () => {
-    setCookie('experience', 0, 365)
+    setCookie('experience', 0, 365);
   }
 
   const showStartButton = () => {
@@ -30,9 +30,7 @@ export default function SeedSelect() {
     <body className="seed-select-page" >
       <h1 className='seed-select'>Select the type of plant you want to grow. Then click start!</h1>
       <h2 className='seed-select'>Finish plants to unlock higher levels.</h2>
-      {/* <div className="back-container"> */}
         <a href="#" className="back-arrow"><BackButton /></a>
-      {/* </div> */}
       <hr className="seed" />
       <h1 className="seed-levels">easy</h1>
       <div className="container-easy">
@@ -60,12 +58,11 @@ export default function SeedSelect() {
       </div>
       <div className="start-button-seed">
         {showSubmitButton && (
-          <button
+        <button
           className="next-button-seed"
-          onClick={ submitClick }
-          ><Link to="/home">Start</Link></button>
+          onClick={submitClick => window.location.href = '/home'}>Start</button>
         )}
-      </div>
-    </body>
+        </div>
+      </body>
   );
 };

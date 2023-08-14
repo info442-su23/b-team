@@ -8,11 +8,15 @@ export default function QuestInstructions() {
         <body>
             <NavBar />
             <a href="#" className="back-arrow"><BackButton /></a>
-            <h1>Quest</h1>
-            <h2>Earn energy points by doing quests! These are real activities that promote less food waste!</h2>
-            <div className="button">
-                <button className="start-button"><strong><Link to="/questprompt">Start</Link></strong> <span class="arrow-right">&#10148;</span> </button>
-            </div>
+            <h1 className="quizpage">Quest</h1>
+            <img src="/img/quest.png" className="game-image nohov" alt="quest" />
+            <h2 className="quizpage">Earn energy points by doing quests! These are real activities that promote less food waste!</h2>
+            <div className="container-landing-page">
+                <Link to="/questprompt" className="start-button-landing">
+                    <strong>Begin Quest</strong>
+                    <span className="arrow-right">&#10148;</span>
+                </Link>
+                </div>
         </body>
     )
 };

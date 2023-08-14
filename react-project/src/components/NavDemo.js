@@ -38,11 +38,16 @@ export default function NavDemo() {
             </div>
 
             <div className="button-container-instruction">
-                <button className="skip-button-instruction"><strong><Link to="/home">Skip</Link></strong></button>
+                <button onClick={() => window.location.href = '/home'} className="skip-button-instruction">
+                    <strong>Skip</strong>
+                </button>
                 <div className="container-instruction">
-                    <button className="next-button-instruction"><strong><Link to="/seedselect">Next</Link></strong> <span className="arrow-right-instruction">&#10148;</span> </button>
+                    <button onClick={() => window.location.href = '/seedselect'} className="next-button-instruction">
+                        <strong>Next</strong>
+                        <span className="arrow-right-instruction">&#10148;</span>
+                    </button>
                 </div>
-            </div>
+                </div>
         </body>
     )
 }

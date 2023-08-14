@@ -8,10 +8,14 @@ export default function SortInstructions() {
         <body>
             <NavBar />
             <a href="#" className="back-arrow"><BackButton /></a>
-            <h1>Sort</h1>
-            <h2>Sort the waste into the appropriate disposal bin. Earn points for each correct choice!</h2>
-            <div className="start-button-seed">
-                <button className="start-button-seed"><strong><Link to="/SortQuestion">Start</Link></strong> <span class="arrow-right">&#10148;</span> </button>
+            <h1 className="quizpage">Sort</h1>
+            <img src="/img/sort.jpeg" className="game-image nohov" alt="sort" />
+            <h2 className="quizpage">Sort the waste into the appropriate disposal bin. Earn points for each correct choice!</h2>
+            <div className="container-landing-page">
+                <Link to="/sortquestion" className="start-button-landing">
+                    <strong>Begin Sort</strong>
+                    <span className="arrow-right">&#10148;</span>
+                </Link>
             </div>
         </body>
     )

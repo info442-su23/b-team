@@ -22,8 +22,10 @@ export default function QuizScore() {
         </section>
       </article>
       <section>
-        <button className='position'><strong><Link to="/games">Back to Games </Link></strong><span className="arrow-right-instruction">&#10148;</span> </button>
-      </section>
+      <Link to="/games" className="start-button-landing">
+                    <strong>Back to Games</strong>
+                    <span className="arrow-right">&#10148;</span>
+                </Link>      </section>
     </body>
   )
 }
