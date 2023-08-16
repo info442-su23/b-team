@@ -13,7 +13,7 @@ export default function GardenPage() {
                     <h1>Garden</h1>
                     <h2>Your Garden is empty :-( </h2>
                     <h2>Plants will appear once fully grown!</h2>
-                    <h3>Earn energy points to grow your plants.</h3>
+                    <h3>Earn energy points in the Games tab to grow your plants.</h3>
                 </header>
             </div>
             <div>
