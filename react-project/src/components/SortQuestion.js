@@ -9,7 +9,7 @@ export default function SortQuestion() {
         <body>
             <NavBar />
             <a href="#" className="back-arrow"><BackButton /></a>
-            <h1>Question 1/5</h1>
+            {/* <h1>Question 1/5</h1> */}
             <section className='sortingQuestion'>
                 <h2>What bin would you use to dispose of an old cucumber?</h2>
                 <img src="img/trash_bins.webp" className='sortingPic' />

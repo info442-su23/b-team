@@ -14,13 +14,13 @@ export default function SortAnswerButton() {
   // 4 possible answers
   const buttons = [
     { id: 1, label: 'Paper', correct: false},
-    { id: 2, label: 'Glass, Cans, Plastic bottles', correct: true},
-    { id: 3, label: 'Compost', correct: false},
+    { id: 2, label: 'Glass, Cans, Plastic bottles', correct: false},
+    { id: 3, label: 'Compost', correct: true},
     { id: 4, label: 'Landfill', correct: false}
   ];
 
   const selectedButton = buttons.find((button) => button.id === selectedButtonId);
-  const toValue = selectedButton?.correct ? "/correctSort" : "/incorrectSort";
+  const toValue = selectedButton?.correct ? "/sortcorrectanswer" : "/sortincorrectanswer";
 
   return (
     <article>

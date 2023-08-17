@@ -21,6 +21,7 @@ import QuestScore from "./components/QuestScore.js";
 import SortInstructions from "./components/SortInstructions.js";
 import SortCorrectAnswer from "./components/SortCorrectAnswer.js";
 import QuizQuestionTest from "./components/QuizQuestionTest.js";
+import SortIncorrectAnswer from "./components/SortIncorrectAnswer.js";
 
 // working model
 function App(props) {
@@ -50,6 +51,7 @@ function App(props) {
         <Route path="/diy" element={<DIY />} />
         <Route path="/compostbin" element={<CompostBin />} />
         <Route path="/sortcorrectanswer" element={<SortCorrectAnswer />} />
+        <Route path="/sortincorrectanswer" element={<SortIncorrectAnswer />} />
       </Routes>
     </div>
   );

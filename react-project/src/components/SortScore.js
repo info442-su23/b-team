@@ -10,7 +10,7 @@ export default function SortScore() {
       <article id="quiz-score">
         <section className="heading">
           <h1>Sort</h1>
-          <p>Congrats! You correctly sorted 5/5 of the waste items.</p>
+          <p>Congrats! You completed sorting the waste items.</p>
         </section>
         <section className="energy-points">
           <img className="energy" src="/img/sun.png" alt="sun" />

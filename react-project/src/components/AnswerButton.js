@@ -15,8 +15,7 @@ export default function AnswerButton({
   const [totalPoints, setTotalPoints] = useState(0);
   const [endQuiz, setEndQuiz] = useState(false);
 
-
-  const buttons = currentQuestion.answers
+  const buttons = currentQuestion.answers;
 
   // When answer is selected, it becomes outlined & "submit answer" button appears
   const answerClick = (buttonId) => {
@@ -35,43 +34,74 @@ export default function AnswerButton({
     return value ? value.pop() : '';
   }
 
-  function updateExperienceDisplay(totalPoints) {
-    document.getElementsByClassName('points').innerText = totalPoints;
+  function updateExperienceDisplay(points) {
+    document.getElementsByClassName('points').innerText = points;
   }
 
   function earnExperience(points) {
-    const currentPoints = parseInt(getCookie('experience'), 10) || 0;
-    const totalPoints = Math.min(currentPoints + points, 100); // Cap at 100 points
-    setCookie('experience', totalPoints, 30); // Store the points in a cookie for 30 days
-    updateExperienceDisplay(totalPoints);
+    const currentExperience = parseInt(getCookie('experience'), 10) || 0;
+    const newExperience = Math.min(currentExperience + points, 100); // Cap at 100 points
+    setCookie('experience', newExperience, 30); // Store the points in a cookie for 30 days
+    updateExperienceDisplay(newExperience);
   }
 
   const submitClick = () => {
-    if (currentQuestionIndex === 4) {
-      setEndQuiz(true)
+    if (currentQuestionIndex === 0) {
+      // Reset correctAnswersCount cookie at the beginning of a new quiz
+      setCookie('correctAnswersCount', '0', 30);
     }
-    const selectedAnswer = currentQuestion.answers.find((answer) => answer.id === selectedButtonId);
+
+    if (currentQuestionIndex === 4) {
+      setEndQuiz(true);
+
+      // Calculate total points earned in the quiz
+      let totalQuizPoints = totalPoints;
+
+      // If the last question was correct, add the final points
+      const selectedAnswer = currentQuestion.answers.find(
+        (answer) => answer.id === selectedButtonId
+      );
+      if (selectedAnswer?.correct) {
+        totalQuizPoints += 20;
+      } else {
+        totalQuizPoints += 10;
+      }
+
+      // Store the total points earned in a cookie
+      setCookie('totalPoints', totalQuizPoints, 30);
+    }
+
+    const selectedAnswer = currentQuestion.answers.find(
+      (answer) => answer.id === selectedButtonId
+    );
     const isCorrect = selectedAnswer?.correct ?? false;
 
-    // calculate points earned
+    // Calculate points earned
     let pointsEarned = isCorrect ? 20 : 10;
     setTotalPoints(totalPoints + pointsEarned);
+
+    // Update correct answers count and store in a cookie
+    const correctAnswersCount =
+      parseInt(getCookie('correctAnswersCount'), 10) || 0;
+    const newCorrectAnswersCount =
+      correctAnswersCount + (isCorrect ? 1 : 0);
+    setCookie('correctAnswersCount', newCorrectAnswersCount, 30); // Store the count in a cookie for 30 days
 
     setShowCorrectAnswer(true);
     setShowSubmitButton(false);
     setShowNextButton(true);
 
     setIsAnswerCorrect(isCorrect);
-  }
+  };
 
   const nextClick = () => {
     setShowNextButton(false);
     if (currentQuestionIndex < 4) {
       handleNextQuestion();
     } else {
-      setEndQuiz(true)
+      setEndQuiz(true);
     }
-  }
+  };
 
   return (
     <article>
@@ -79,9 +109,8 @@ export default function AnswerButton({
         {buttons.map((button) => (
           <button
             key={button.id}
-            className={`answer-block ${
-              selectedButtonId === button.id ? 'selected' : 'unselected'
-            }`}
+            className={`answer-block ${selectedButtonId === button.id ? 'selected' : 'unselected'
+              }`}
             onClick={() => answerClick(button.id)}
             disabled={showNextButton}
           >
@@ -91,18 +120,18 @@ export default function AnswerButton({
       </section>
       {showSubmitButton && (
         <button
-        className="next-button-instruction heading"
-        onClick={ submitClick }
+          className="next-button-instruction heading"
+          onClick={submitClick}
         >Submit</button>
       )}
       {showNextButton && currentQuestionIndex < 4 && (
         <section>
-          <button className="next-button-instruction heading" onClick={ nextClick }>Next Question</button>
+          <button className="next-button-instruction heading" onClick={nextClick}>Next Question</button>
         </section>
-        )}
+      )}
       {currentQuestionIndex === 4 && endQuiz && (
-        <Link to="/quizscore" state={ totalPoints }>
-          <button className="next-button-instruction heading" onClick={ earnExperience(totalPoints) }>Score</button>
+        <Link to="/quizscore" state={totalPoints}>
+          <button className="next-button-instruction heading" onClick={() => earnExperience(totalPoints)}>Score</button>
         </Link>
       )}
     </article>

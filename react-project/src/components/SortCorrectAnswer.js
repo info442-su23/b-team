@@ -9,13 +9,14 @@ export default function SortCorrectAnswer() {
 
   // const location = useLocation();
   // const { currentQuestion, selectedButtonId } = location.state;
+  
 
 
   return (
     <body>
       <NavBar />
       <a href="#" className="back-arrow"><BackButton /></a>
-      <h1>Question {1}/5</h1>
+      {/* <h1>Question {1}/5</h1> */}
       <article className='correct-answer'>
         <section>
           {/* <h1>{selectedAnswer.correct ? 'Correct!' : 'Incorrect'}</h1> */}
@@ -24,16 +25,16 @@ export default function SortCorrectAnswer() {
           </div>
         </section>
         <section>
-          <h2>What percentage of trash is food?</h2>
+          {/* <h2>What percentage of trash is food?</h2> */}
           <section className='sortingQuestion'>
                 <h2>What bin would you use to dispose of an old cucumber?</h2>
                 <img src="img/trash_bins.webp" className='sortingPic' />
-                <SortAnswerButton />
+                {/* <SortAnswerButton /> */}
             </section>
         </section>
       </article>
       <section className="container-instruction margin">
-          <button className="next-button-instruction"><strong><Link to="/sortquestion">Next</Link></strong> <span className="arrow-right-instruction">&#10148;</span> </button>
+          <button className="next-button-instruction"><strong><Link to="/sortscore">Next</Link></strong> <span className="arrow-right-instruction">&#10148;</span> </button>
       </section>
 
     </body>
