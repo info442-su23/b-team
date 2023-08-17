@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
-import { Link } from "react-router-dom";
 import BackButton from './GoBackButton';
 
 export default function SeedSelect() {
   const [showSubmitButton, setShowSubmitButton] = useState(false);
-  const [showOutline, setShowOutline] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  const handleImageClick = (imageName) => {
+    setSelectedImage(imageName);
+  };
 
   function setCookie(name, value, days) {
     const expires = new Date();
@@ -17,13 +20,16 @@ export default function SeedSelect() {
     return value ? value.pop() : '';
   }
 
-  const submitClick = () => {
+  const submitClick = (selectedImage) => {
+    if (getCookie('experience') == 100) {
+      setCookie('experience', 0, 365);
+    }
+    setCookie('plant', `${selectedImage}`, 365);
     setCookie('experience', 0, 365);
   }
 
   const showStartButton = () => {
     setShowSubmitButton(true)
-    setShowOutline(true)
   }
 
   return (
@@ -35,10 +41,22 @@ export default function SeedSelect() {
       <h1 className="seed-levels">easy</h1>
       <div className="container-easy">
         <div className="box-opaque" onClick={ showStartButton }>
-        <h2 className='seed-label'>Tomato</h2><img src="img/seed.jpeg" className={showOutline ? "seed-select selected" : "seed-select"} />
-          </div>
-        <div className={getCookie('experience') == 100 ? "box-opaque" : "box"}>
-          <h2 className='seed-label'>Pepper</h2><img src="img/seed.jpeg" className="seed-select" />
+        <h2 className='seed-label'>Tomato</h2>
+        <img
+          src="img/seed.jpeg"
+          className={`seed-select ${selectedImage === 'tomato' ? 'seed-selected' : ''}`}
+          onClick={() => handleImageClick('tomato')}
+          alt="seed"
+        />
+        </div>
+        <div className={getCookie('experience') == 100 ? "box-opaque" : "box"} onClick={getCookie('experience') == 100 ? showStartButton : null}>
+          <h2 className='seed-label'>Pepper</h2>
+          <img
+            src="img/seed.jpeg"
+            className={`seed-select ${selectedImage === 'pepper' ? 'seed-selected' : ''}`}
+            onClick={getCookie('experience') == 100? () => handleImageClick('pepper') : null}
+            alt='seed'
+        />
         </div>
         <div className="box"><h2 className='seed-label'>Raspberry</h2><img src="img/seed.jpeg" className="seed-select" /></div>
       </div>
@@ -60,7 +78,10 @@ export default function SeedSelect() {
         {showSubmitButton && (
         <button
           className="next-button-seed"
-          onClick={submitClick => window.location.href = '/home'}>Start</button>
+          onClick={() => {
+            submitClick(selectedImage);
+            window.location.href = '/home';
+          }}>Start</button>
         )}
         </div>
       </body>

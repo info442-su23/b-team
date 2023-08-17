@@ -8,6 +8,16 @@ export default function NavBar() {
         return value ? value.pop() : '';
     }
 
+    function setCookie(name, value, days) {
+        const expires = new Date();
+        expires.setTime(expires.getTime() + days * 24 * 60 * 60 * 1000);
+        document.cookie = `${name}=${value};expires=${expires.toUTCString()};path=/`;
+      }
+
+    if (getCookie('experience') == 100) {
+        setCookie(`grown-${getCookie('plant')}`, true, 365);
+    }
+
     return (
         <body className="navbar">
             <nav className="navbar">
