@@ -12,11 +12,11 @@ export default function HomePage() {
   function updatePlant(progress) {
     let path = "/img/seed.jpeg";
     if (progress == 100) {
-      path = "img/stage-3-tomato-plant.png";
+      path = `img/stage-3-${getCookie('plant')}-plant.jpg`;
     } else if (progress > 66) {
-      path = "img/stage-2-tomato-plant.png";
+      path = `img/stage-2-${getCookie('plant')}-plant.jpg`;
     } else if (progress > 33) {
-      path = "img/stage-1-tomato-plant.jpg";
+      path = `img/stage-1-${getCookie('plant')}-plant.jpg`;
     }
     return path;
   }
@@ -30,7 +30,7 @@ export default function HomePage() {
       <div className="flex-container">
   <img src={plant} className="seed" alt="seed" />
   <div className="percent">
-    <p>Your tomato plant is {getCookie('experience')}% grown. {isPlantFullyGrown ? 'Start growing your next plant by selecting a new seed!' : 'Start playing games to earn more energy points and grow your plant!'}</p>
+    <p>Your {getCookie('plant')} plant is {getCookie('experience')}% grown. {isPlantFullyGrown ? 'Start growing your next plant by selecting a new seed!' : 'Start playing games to earn more energy points and grow your plant!'}</p>
   </div>
 </div>
       <div className="container">
