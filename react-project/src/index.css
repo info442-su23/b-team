@@ -550,7 +550,7 @@ h2.quizpage {
 
   .text-container {
     max-width: 400px;
-    padding: 10px; 
+    padding: 10px;
   }
 
   .text-container > p {
@@ -685,13 +685,17 @@ button.position {
   margin-top: 20%;
 }
 
+.heading2 {
+  margin-top: 5%;
+}
+
 #game-selection {
   display: flex;
   justify-content: center;
 }
 
 .game-image {
-  width: 200px; 
+  width: 200px;
   height: 200px;
   border-radius: 10%;
   transition: transform 0.2s ease-in-out;
@@ -769,4 +773,10 @@ img.sortingPic {
 
 .next-button-instruction-sorting:hover {
   transform: scale(1.05);
+}
+
+.diy-text-container {
+  word-wrap: break-word;
+  white-space: normal;
+  overflow: hidden;
 }
