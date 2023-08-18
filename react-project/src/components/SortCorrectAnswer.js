@@ -7,10 +7,13 @@ import SortAnswerButton from './SortAnswerButton';
 
 export default function SortCorrectAnswer() {
 
-  // const location = useLocation();
-  // const { currentQuestion, selectedButtonId } = location.state;
-  
+  function setCookie(name, value, days) {
+    const expires = new Date();
+    expires.setTime(expires.getTime() + days * 24 * 60 * 60 * 1000);
+    document.cookie = `${name}=${value};expires=${expires.toUTCString()};path=/`;
+  }
 
+  setCookie('totalPoints', 20, 365);
 
   return (
     <body>
